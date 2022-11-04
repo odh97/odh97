@@ -16,7 +16,7 @@ Here are some ideas to get you started:
 -->
 
 
-<img src="https://img.shields.io/badge/HTML5-orange?style=flat&logo=HTML5?logoColor=#ffffff"/>
+<img src="https://img.shields.io/badge/HTML5-orange?style=flat&logo=HTML5?logoColor=E34F26"/>
 
 
 
