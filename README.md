@@ -1,10 +1,10 @@
 ### Hi! Nice to see you. 👋
 
 <div>
-  <img src="https://img.shields.io/badge/React-263238?style=flat&logo=React&logoColor=61DAFB"> : www.준비중.com
+  <img src="https://img.shields.io/badge/Blog-FF5722?style=flat&logo=Blogger&logoColor=ffffff"> : www.준비중.com
 <div>
 <div>
-  <img src="https://img.shields.io/badge/React-263238?style=flat&logo=React&logoColor=61DAFB"> : www.준비중.com
+  <img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=ffffff"> : www.준비중.com
 <div>
 
 <h3>tech stack</h3>
