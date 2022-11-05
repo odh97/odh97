@@ -16,9 +16,9 @@
 
 <h3>Tools</h3>
 
+![XD](https://img.shields.io/badge/XD-FF61F6?style=flat&logo=AdobeXD&logoColor=ffffff)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=ffffff)
 ![Github](https://img.shields.io/badge/Github-181717?style=flat&logo=Github&logoColor=ffffff)
-
 
 
 
