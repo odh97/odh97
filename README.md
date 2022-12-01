@@ -1,10 +1,7 @@
 ### Hi! Nice to see you. 👋
 
 <div>
-  <img src="https://img.shields.io/badge/Blog-FF5722?style=flat&logo=Blogger&logoColor=ffffff"> : www.준비중.com
-<div>
-<div>
-  <img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=ffffff"> : www.준비중.com
+  <img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=ffffff"> : <a href="https://quiver-primula-23d.notion.site/TIL-Today-I-Learned-bca75cfcd1b14d868eb507d726ca8825">Notion TIL(Today I Learned)</a>
 <div>
 
 <h3>tech stack</h3>
