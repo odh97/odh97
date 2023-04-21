@@ -7,6 +7,7 @@
 <h3>tech stack</h3>
 
 ![React](https://img.shields.io/badge/React-263238?style=flat&logo=React&logoColor=61DAFB)
+![Typescript](https://img.shields.io/badge/Typescript-3178C6?style=flat&logo=Typescript&logoColor=ffffff)
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=ffffff)
 ![MongoDB](https://img.shields.io/badge/MongoDB-339933?style=flat&logo=MongoDB&logoColor=ffffff)
 ![bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=ffffff)
