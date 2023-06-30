@@ -14,6 +14,7 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-339933?style=flat&logo=MongoDB&logoColor=ffffff)
 ![bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=ffffff)
 ![javascript](https://img.shields.io/badge/Javascript-F7DF1E?style=flat&logo=javascript&logoColor=ffffff)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=ffffff)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=ffffff)
 ![HTML5](https://img.shields.io/badge/HTML5-orange?style=flat&logo=HTML5&logoColor=ffffff)
 
