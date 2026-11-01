@@ -4,24 +4,18 @@
 
 1. GitHub 계정 **odh97**에서 **odh97**라는 이름의 공개 저장소를 만듭니다. 기존 odh97/odh97가 있다면 백업한 뒤 필요한 파일을 교체합니다.
 2. 이 패키지 **안쪽 파일과 폴더**를 저장소 최상위에 올립니다. odh97-profile 폴더 자체를 한 단계 더 넣지 마세요.
-3. README.md와 assets/는 필수입니다. 통계 자동 갱신에는 scripts/와 **숨김 폴더 .github/**도 필요합니다. 웹 업로드 시 .github가 누락되지 않았는지 저장소 파일 목록에서 확인하세요.
+3. README.md와 cards/·assets/는 필수입니다. 자동 갱신에는 **숨김 폴더 .github/**도 필요합니다. 웹 업로드 시 .github가 누락되지 않았는지 저장소 파일 목록에서 확인하세요.
 4. 프로필 https://github.com/odh97 에서 결과를 확인합니다. 기본 브랜치가 main/master가 아니면 워크플로의 push.branches를 수정합니다.
 
-## 2. 내 캐릭터 연결하기
+## 2. 프로필 카드
 
-캐릭터는 이 패키지에 포함하지 않았습니다. 별도 Work에서 만든 본인의 파일을 **assets/avatar.png**로 저장하세요. README.md 상단의 다음 태그를 주석 밖으로 이동합니다.
-
-```html
-<img src="./assets/avatar.png" align="right" width="144" alt="오대현의 픽셀 캐릭터" />
-```
-
-이미지 추가 전에는 주석을 유지하세요. 안내 파일 assets/avatar.png.README.md는 지워도 됩니다. 이미지 경로는 README 위치 기준이며 대소문자까지 같아야 합니다. 캐릭터와 SVG를 별개 파일로 두었으므로 교체가 쉽고, SVG 내부의 외부 이미지 로딩에 의존하지 않습니다.
+프로필 카드는 터미널 화면 스타일입니다. 캐릭터는 GitHub 프로필 사진에서 보여 주므로 카드에는 넣지 않습니다. 문구는 cards/profile/profile.svg의 text 요소에서 수정하고, 새 글자를 쓰면 `node cards/embed.mjs cards/profile/profile.svg`를 실행하세요.
 
 ## 3. 통계 첫 실행
 
 저장소 **Actions → Update profile stats → Run workflow**를 한 번 실행하세요. 이후 매일 **한국 시간 09:23**에 갱신을 시도합니다. 예약 실행은 지연될 수 있습니다. 별도 개인 토큰 입력 없이 저장소의 GITHUB_TOKEN을 사용합니다.
 
-초기 카드의 **--**는 실제 수치를 아직 받지 않았다는 뜻입니다. 제작 환경에서 GitHub API에 연결할 수 없어 숫자를 임의로 채우지 않았습니다. 첫 성공 이후 실제 공개 통계와 UTC 갱신 시각이 표시됩니다. API 요청이 실패하면 기존 카드는 유지되고 Actions에 실패가 표시됩니다.
+통계 카드에는 실제 공개 통계와 UTC 갱신 시각이 표시됩니다. 페이지를 열 때 API를 호출하는 방식이 아니라, Actions가 매일 데이터를 조회해 저장소의 SVG 파일을 갱신하는 방식입니다. API 요청이 실패하면 기존 카드는 유지되고 Actions에 실패가 표시됩니다. **--**는 아직 통계를 받지 않은 초기 상태를 뜻합니다.
 
 | 항목 | 집계 기준 |
 | --- | --- |
@@ -32,41 +26,60 @@
 
 커밋 수·비공개 기여·회사 또는 조직 소유 저장소는 집계하지 않습니다. STARS와 FORKS는 저장소 API 필드의 합계이며 기여도 점수가 아닙니다.
 
-통계가 갱신되지 않으면 Actions 활성화 여부, 실패 로그, 저장소 정책의 Actions 쓰기 권한과 기본 브랜치 보호 규칙을 확인하세요. 이 워크플로는 assets/stats.svg를 기본 브랜치에 커밋합니다. 조직 정책이 쓰기를 금지하거나 브랜치 보호가 직접 푸시를 막으면 관리 정책에 맞는 변경이 필요합니다. 장기간 활동이 없는 공개 저장소의 예약 실행은 비활성화될 수 있으므로 Actions에서 재활성화하세요.
+통계가 갱신되지 않으면 Actions 활성화 여부, 실패 로그, 저장소 정책의 Actions 쓰기 권한과 기본 브랜치 보호 규칙을 확인하세요. 이 워크플로는 cards/stats/stats.svg를 기본 브랜치에 커밋합니다. 조직 정책이 쓰기를 금지하거나 브랜치 보호가 직접 푸시를 막으면 관리 정책에 맞는 변경이 필요합니다. 장기간 활동이 없는 공개 저장소의 예약 실행은 비활성화될 수 있으므로 Actions에서 재활성화하세요.
 
 ## 4. 디자인과 배지
 
-첨부 시안에 맞춘 남색 카드와 보라색 테두리 디자인입니다. 소개·기술을 한 장의 overview.svg에 담아 GitHub에서도 배경과 배치를 유지합니다. SVG는 960px 기준이며 화면에 맞춰 축소됩니다. 외부 폰트·CSS·스크립트를 불러오지 않습니다. 글자는 Arial과 맑은 고딕 등 시스템 글꼴을 사용하므로 기기별 자형에 작은 차이가 있을 수 있습니다.
+첨부 시안에 맞춘 남색 카드와 보라색 테두리 디자인입니다. 소개(cards/profile/profile.svg)와 기술(cards/skills/skills.svg)은 별도 카드로 README에 차례로 표시합니다. SVG는 960px 기준이며 화면에 맞춰 축소됩니다. 외부 폰트·CSS·스크립트를 불러오지 않습니다. 글자는 Arial과 맑은 고딕 등 시스템 글꼴을 사용하므로 기기별 자형에 작은 차이가 있을 수 있습니다.
 
-소개는 assets/profile.svg의 text 요소, 기술 칩은 assets/skills.svg의 text 요소에서 수정합니다. 수정 후 Node.js로 `node scripts/build-overview.mjs`를 실행하면 README에서 표시하는 overview.svg에 반영됩니다. 카드 안의 기술 칩은 시안에 맞춘 SVG 그래픽이며, 실제 Shields 배지 10종은 README의 **기술 배지 보기**를 펼쳐 확인할 수 있습니다.
+소개는 cards/profile/profile.svg, 기술 배지는 cards/skills/skills.svg의 text 요소에서 수정합니다. 별도 빌드 없이 바로 반영됩니다. 기술 카드는 캐릭터 배경을 따른 픽셀 야경 스타일이며, 배지 좌표 규칙은 파일 상단 주석에 있습니다. 글꼴(제목 Silkscreen, 본문 JetBrains Mono·IBM Plex Sans KR)은 GitHub에서도 보이도록 SVG 안에 넣었습니다. 새 글자를 쓰면 `node cards/embed.mjs cards/profile/profile.svg cards/skills/skills.svg`를 실행하세요.
 
 | 색 | 용도 |
 | --- | --- |
 | #111526 / #202841 | 바깥 배경·남색 카드 |
-| #333C59 / #202840 | 기술 칩·Shields 배지 |
+| #28324D / #46516F | 기술 배지 배경·테두리 |
 | #9786EC | 보라색 테두리 |
 | #EDE9FE | 밝은 글자 |
 | #BDEDDD | 민트 포인트 |
 
-기술 10종은 실제 img.shields.io URL을 사용합니다. Zustand는 다른 기술의 로고로 오인되지 않도록 **텍스트 배지**로 만들었습니다. 배지는 외부 서비스이므로 네트워크·서비스 장애 때 표시가 지연될 수 있습니다. SVG 헤더와 통계 카드는 저장소 파일을 사용하므로 Shields와 독립적입니다. README에는 이미지 대체 텍스트를 포함했습니다.
+기술 배지는 cards/skills/skills.svg에 직접 그리므로 외부 배지 서비스 없이 표시됩니다. 중복된 펼침 배지 영역을 제거하고 소개 카드 안에서 기술 목록을 한 번에 볼 수 있도록 구성했습니다. README에는 이미지 대체 텍스트를 포함했습니다.
+
+## 5. 팩맨 기여 그래프
+
+README에 팩맨 기여 그래프를 표시합니다. 남색 그라데이션 카드 안에 어두운 게임 보드를 배치하고, 노란 팩맨 아이콘과 보라색 잔디로 구성했습니다. 보드 좌우 여백은 34px이며, 보드 내부에는 12px 여백을 더 두었습니다. 헤더에는 자동 재생 표시, 하단에는 기여도 색상 범례가 있습니다. 기본 GitHub 잔디와 별개로 표시됩니다.
+
+팩맨 생성 후 `node cards/pacman/style.mjs 입력.svg cards/pacman/pacman.svg`로 색상과 카드 프레임을 적용합니다. 프레임 디자인은 cards/pacman/template.svg에서 수정합니다. Actions에도 이 단계를 연결했습니다. 전체 잔디의 좌표 범위를 viewBox로 지정해 오른쪽이 잘리지 않고 같은 비율로 축소되도록 합니다. 로컬 카드만 다시 꾸미려면 `node cards/pacman/style.mjs`를 실행합니다. SAMPLE DATA 표시는 유지됩니다.
+
+현재 로컬 이미지에 **SAMPLE DATA**가 있으면 원본 프로젝트의 공식 예시 데이터입니다. odh97의 기여 기록이 아닙니다. 로컬에 GitHub 인증 토큰이 없어 디자인 확인용으로 넣었으며, 첫 Actions 성공 시 실제 계정의 기여 기록으로 이미지 전체가 교체되고 예시 표시도 사라집니다.
+
+`.github/workflows/contribution-previews.yml`을 기본 브랜치에 푸시하면 첫 생성을 시도합니다. 수동 실행은 **Actions → Update Pac-Man contributions → Run workflow**에서 할 수 있습니다. 이후 매일 한국 시간 **09:33**에 갱신을 시도합니다. Actions 실행과 실제 계정 이미지 생성은 로컬에서 검증할 수 없으므로 첫 실행 로그를 확인하세요.
+
+이미지는 저장소 파일이므로 페이지를 열 때 외부 생성 서버를 호출하지 않습니다.
+
+원본과 예시 이미지 출처:
+
+- [Pac-Man Contribution Graph](https://github.com/abozanona/pacman-contribution-graph) · [예시 SVG](https://github.com/abozanona/pacman-contribution-graph/blob/main/assets/demo/pacman.svg)
 
 ## 폴더 구성
 
 ```text
 README.md
-assets/
-  overview.svg                README에 표시하는 소개·기술 통합 카드
-  profile.svg                 소개 카드
-  skills.svg                  기술 인벤토리 카드
-  activity.svg                통계 섹션 헤더
-  stats.svg                   자동 갱신 통계 카드
-  footer.svg                  하단 장식
-  avatar.png.README.md         캐릭터 경로 안내 (PNG 아님)
-  avatar.png                  본인이 추가할 파일, 현재 미포함
+CLAUDE.md                     카드별 수정 위치 안내
+cards/
+  profile/profile.svg         소개 카드 (직접 편집)
+  skills/skills.svg           기술 카드 (직접 편집)
+  embed.mjs                   SVG에 글꼴 삽입 (프로필·스킬 공용)
+  pacman/
+    template.svg              팩맨 카드 프레임 디자인
+    style.mjs                 색상 매핑 + 템플릿 적용
+    pacman.svg                생성물 (Actions가 실제 기록으로 교체, 직접 편집 금지)
+  stats/
+    template.svg              통계 카드 디자인
+    update.mjs                GitHub API 수집 + 템플릿 적용
+    update.test.mjs           테스트
+    stats.svg                 생성물 (Actions가 매일 갱신)
 .github/workflows/profile-stats.yml
-scripts/build-overview.mjs
-scripts/update-stats.mjs
-scripts/test-stats.mjs
+.github/workflows/contribution-previews.yml
 docs/SETUP.md
 ```
 
@@ -75,8 +88,8 @@ docs/SETUP.md
 Node.js 24가 있다면 패키지 폴더에서 다음을 실행할 수 있습니다. 추가 패키지는 필요하지 않습니다.
 
 ```text
-node --test scripts/test-stats.mjs
-node scripts/update-stats.mjs
+node --test cards/stats/update.test.mjs
+node cards/stats/update.mjs
 ```
 
 두 번째 명령은 GitHub API에 접속하여 통계를 갱신합니다. --init 옵션은 초기 카드로 되돌리므로 적용 후에는 사용하지 마세요.

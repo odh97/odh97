@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { collectStats, renderStats } from './update-stats.mjs';
+import { collectStats, renderStats } from './update.mjs';
 
 test('pagination, public ownership, and original repository totals', async () => {
   const calls=[];

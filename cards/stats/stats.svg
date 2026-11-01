@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="292" viewBox="0 0 960 292" role="img" aria-labelledby="stats-title stats-desc">
+  <title id="stats-title">odh97 GitHub public statistics</title>
+  <desc id="stats-desc">PUBLIC REPOS: 34, STARS: 1, FOLLOWERS: 9, FORKS: 0</desc>
+  <rect width="960" height="292" rx="16" fill="#111526"/>
+  <rect x="16" y="8" width="928" height="226" rx="7" fill="#202841" stroke="#9786EC" stroke-width="2"/>
+  <g font-family="Arial, sans-serif">
+    <text x="34" y="49" font-size="18" font-weight="600" fill="#BEB2F3">✦ GITHUB STATS</text>
+    <path d="M34 72H926" stroke="#414B6A"/>
+    <g transform="translate(34,92)"><rect width="214" height="96" rx="8" fill="#28324D" stroke="#46516F"/><text x="18" y="27" font-size="12" fill="#ADB9DA">PUBLIC REPOS</text><text x="18" y="74" font-size="34" font-weight="bold" fill="#EDE9FE">34</text></g>
+    <g transform="translate(260,92)"><rect width="214" height="96" rx="8" fill="#28324D" stroke="#46516F"/><text x="18" y="27" font-size="12" fill="#ADB9DA">STARS</text><text x="18" y="74" font-size="34" font-weight="bold" fill="#EDE9FE">1</text></g>
+    <g transform="translate(486,92)"><rect width="214" height="96" rx="8" fill="#28324D" stroke="#46516F"/><text x="18" y="27" font-size="12" fill="#ADB9DA">FOLLOWERS</text><text x="18" y="74" font-size="34" font-weight="bold" fill="#BDEDDD">9</text></g>
+    <g transform="translate(712,92)"><rect width="214" height="96" rx="8" fill="#28324D" stroke="#46516F"/><text x="18" y="27" font-size="12" fill="#ADB9DA">FORKS</text><text x="18" y="74" font-size="34" font-weight="bold" fill="#EDE9FE">0</text></g>
+    <text x="34" y="216" font-family="monospace" font-size="11" fill="#ADB9DA">UPDATED 2026-11-01 09:12 / UTC</text>
+    <text x="926" y="216" text-anchor="end" font-size="11" fill="#ADB9DA">PUBLIC DATA · DAILY SYNC</text>
+    <path d="M34 255H690" stroke="#343E5C"/>
+    <text x="926" y="260" text-anchor="end" font-size="11" letter-spacing="1.2" fill="#BEB2F3">✦ THANKS FOR VISITING</text>
+  </g>
+</svg>

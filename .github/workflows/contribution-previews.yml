@@ -1,0 +1,50 @@
+name: Update Pac-Man contributions
+
+on:
+  schedule:
+    - cron: '33 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - .github/workflows/contribution-previews.yml
+      - cards/pacman/style.mjs
+      - cards/pacman/template.svg
+
+permissions:
+  contents: write
+
+# Serialize with the stats workflow so generated commits do not conflict.
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Generate Pac-Man animation
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ github.token }}
+          games: pacman
+      - name: Style Pac-Man card
+        run: |
+          mkdir -p cards/pacman
+          test -s dist/pacman-contribution-graph-dark.svg
+          node cards/pacman/style.mjs dist/pacman-contribution-graph-dark.svg cards/pacman/pacman.svg
+      - name: Commit Pac-Man card
+        run: |
+          if [ -n "$(git status --porcelain -- cards/pacman/pacman.svg)" ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add cards/pacman/pacman.svg
+            git commit -m 'Update Pac-Man contributions'
+            git push
+          fi
