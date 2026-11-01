@@ -1,66 +1,52 @@
+<!-- Pixel artwork: assets/*.svg | Setup: docs/SETUP.md -->
+<p align="center">
+  <img src="./assets/profile.svg" width="960" alt="O_Dae ✦ — Frontend Developer · Player Profile" />
+</p>
 
-<!-- 🎮 PLAYER PROFILE -->
-
-<img src="./assets/pixel-avatar.png" align="right" width="190" alt="O_Dae Pixel Avatar" />
+<!-- 본인이 제작한 캐릭터를 assets/avatar.png로 추가한 뒤 아래 한 줄의 주석을 해제하세요.
+<img src="./assets/avatar.png" align="right" width="144" alt="오대현의 픽셀 캐릭터" />
+-->
 
 # O_Dae ✦
 
-**Frontend Developer**
-
-오대현 · `odh97`
+**Frontend Developer**  
+오대현 · **odh97**
 
 서비스를 이해할수록 개발이 더 재미있어집니다.
 
-[![Notion](https://img.shields.io/badge/Notion_TIL-000000?style=flat-square&logo=notion&logoColor=white)](https://quiver-primula-23d.notion.site/TIL-Today-I-Learned-bca75cfcd1b14d868eb507d726ca8825)
+[![GitHub](https://img.shields.io/badge/odh97-343A62?style=flat-square&logo=github&logoColor=EDE9FE)](https://github.com/odh97)
 
 <br clear="right" />
 
----
+<img src="./assets/skills.svg" width="960" alt="Skill Inventory — 기술 스택" />
 
-### 🎒 Skill Inventory
+### Languages
 
-**Languages**
+![JavaScript](https://img.shields.io/badge/JavaScript-202840?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![TypeScript](https://img.shields.io/badge/TypeScript-202840?style=for-the-badge&logo=typescript&logoColor=6EA9F7)
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+### Frontend
 
-**Frontend**
+![React](https://img.shields.io/badge/React-202840?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-202840?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-202840?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8)
+![React Query](https://img.shields.io/badge/React_Query-202840?style=for-the-badge&logo=reactquery&logoColor=FF8092)
+![Zustand](https://img.shields.io/badge/Zustand-202840?style=for-the-badge)
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)
-![Zustand](https://img.shields.io/badge/Zustand-433E38?style=for-the-badge&logo=react&logoColor=white)
+### Backend
 
-**Backend**
+![Node.js](https://img.shields.io/badge/Node.js-202840?style=for-the-badge&logo=nodedotjs&logoColor=8ED5A0)
+![Express](https://img.shields.io/badge/Express-202840?style=for-the-badge&logo=express&logoColor=FFFFFF)
+![NestJS](https://img.shields.io/badge/NestJS-202840?style=for-the-badge&logo=nestjs&logoColor=FF8092)
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+<br />
 
----
+<img src="./assets/activity.svg" width="960" alt="Activity Log — GitHub 통계" />
 
-### 📂 Quest Log
+[![GitHub 통계: 공개 저장소·원본 저장소 stars/forks·팔로워](./assets/stats.svg)](https://github.com/odh97?tab=repositories)
 
-**🫧 POSONG**
+<sub>공개 데이터 기준 · 매일 자동 갱신 · 카드 하단에 마지막 갱신 시각 표시</sub>
 
-세차 및 차량 관리 예약 플랫폼
+<br /><br />
 
-- 지역과 시간 기반 예약 서비스
-- 사용자와 업체를 연결하는 서비스 개발
-
-**📚 DaldalEnglish**
-
-영어 학습 서비스 프론트엔드 개발 및 운영
-
-- 학습 콘텐츠 및 학습 컨테이너 개발
-- 사용자 경험 개선과 서비스 운영
-
----
-
-### 📊 Activity Log
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=odh97&show_icons=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=odh97&layout=compact&theme=tokyonight&hide_border=true" height="165" alt="Top Languages" />
-</div>
+<img src="./assets/footer.svg" width="960" alt="Thanks for visiting · Continue?" />
