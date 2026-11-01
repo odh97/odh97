@@ -1,4 +1,7 @@
 <!-- 각 카드는 cards/<이름>/ 폴더에서 따로 수정합니다. 안내: CLAUDE.md, docs/SETUP.md -->
+<!-- 헤더·푸터 배너: capsule-render(외부 서비스). 색은 URL의 color 값 -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0E1230,100:3B348F&height=120&section=header" width="960" alt="" />
+
 <img src="./cards/profile/profile.svg" width="960" alt="O_Dae ✦ · Frontend Developer · 오대현 · odh97 · 서비스를 이해할수록 개발이 더 재미있어집니다." />
 <img src="./cards/skills/skills.svg" width="960" alt="기술: JavaScript, TypeScript, React, Next.js, Tailwind CSS, React Query, Zustand, Node.js, Express, NestJS" />
 
