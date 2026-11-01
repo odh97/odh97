@@ -44,21 +44,17 @@
 
 기술 배지는 cards/skills/skills.svg에 직접 그리므로 외부 배지 서비스 없이 표시됩니다. 중복된 펼침 배지 영역을 제거하고 소개 카드 안에서 기술 목록을 한 번에 볼 수 있도록 구성했습니다. README에는 이미지 대체 텍스트를 포함했습니다.
 
-## 5. 팩맨 기여 그래프
+## 5. 기여 그래프 (아파트 카드)
 
-README에 팩맨 기여 그래프를 표시합니다. 남색 그라데이션 카드 안에 어두운 게임 보드를 배치하고, 노란 팩맨 아이콘과 보라색 잔디로 구성했습니다. 보드 좌우 여백은 34px이며, 보드 내부에는 12px 여백을 더 두었습니다. 헤더에는 자동 재생 표시, 하단에는 기여도 색상 범례가 있습니다. 기본 GitHub 잔디와 별개로 표시됩니다.
+README 세 번째 카드는 1년치 기여 기록을 아파트 외벽의 창문으로 보여 줍니다. 기여가 없는 날은 꺼진 창문, 많을수록 밝은 불빛입니다. 위로는 하늘과 옥상(안테나·화분·위성 안테나), 아래로는 화단·산책로·잔디밭이 이어져 프로필(하늘) → 스킬(야경) → 아파트로 장면이 연결됩니다. 왼쪽 위에는 `$ git log --graph`가 있습니다.
 
-팩맨 생성 후 `node cards/pacman/style.mjs 입력.svg cards/pacman/pacman.svg`로 색상과 카드 프레임을 적용합니다. 프레임 디자인은 cards/pacman/template.svg에서 수정합니다. Actions에도 이 단계를 연결했습니다. 전체 잔디의 좌표 범위를 viewBox로 지정해 오른쪽이 잘리지 않고 같은 비율로 축소되도록 합니다. 로컬 카드만 다시 꾸미려면 `node cards/pacman/style.mjs`를 실행합니다. SAMPLE DATA 표시는 유지됩니다.
+애니메이션은 [pacman-contribution-graph](https://github.com/abozanona/pacman-contribution-graph)가 GitHub GraphQL의 contributionCalendar로 생성합니다. 프로필 설정에서 비공개 기여 표시를 켜 두면 비공개 기여 횟수도 포함됩니다. 팩맨 자리는 캐릭터 그림 속 회색 고양이 픽셀 스프라이트로 바꾸고 이동 경로만 유지합니다(회전·입 모양 제외).
 
-현재 로컬 이미지에 **SAMPLE DATA**가 있으면 원본 프로젝트의 공식 예시 데이터입니다. odh97의 기여 기록이 아닙니다. 로컬에 GitHub 인증 토큰이 없어 디자인 확인용으로 넣었으며, 첫 Actions 성공 시 실제 계정의 기여 기록으로 이미지 전체가 교체되고 예시 표시도 사라집니다.
+- 장면 디자인: cards/pacman/template.svg (명령 줄 글자를 바꾸면 `node cards/embed.mjs cards/pacman/template.svg`)
+- 창문 색·고양이 스프라이트: cards/pacman/style.mjs의 `colors`, `PLAYER`
+- 로컬에서 다시 입히기: `node cards/pacman/style.mjs` (이미 스타일이 입혀진 파일에도 다시 적용 가능)
 
-`.github/workflows/contribution-previews.yml`을 기본 브랜치에 푸시하면 첫 생성을 시도합니다. 수동 실행은 **Actions → Update Pac-Man contributions → Run workflow**에서 할 수 있습니다. 이후 매일 한국 시간 **09:33**에 갱신을 시도합니다. Actions 실행과 실제 계정 이미지 생성은 로컬에서 검증할 수 없으므로 첫 실행 로그를 확인하세요.
-
-이미지는 저장소 파일이므로 페이지를 열 때 외부 생성 서버를 호출하지 않습니다.
-
-원본과 예시 이미지 출처:
-
-- [Pac-Man Contribution Graph](https://github.com/abozanona/pacman-contribution-graph) · [예시 SVG](https://github.com/abozanona/pacman-contribution-graph/blob/main/assets/demo/pacman.svg)
+Actions(**Update Pac-Man contributions**)가 매일 한국 시간 09:33에 갱신합니다.
 
 ## 폴더 구성
 
@@ -70,7 +66,7 @@ cards/
   skills/skills.svg           기술 카드 (직접 편집)
   embed.mjs                   SVG에 글꼴 삽입 (프로필·스킬 공용)
   pacman/
-    template.svg              팩맨 카드 프레임 디자인
+    template.svg              아파트 카드 장면 디자인
     style.mjs                 색상 매핑 + 템플릿 적용
     pacman.svg                생성물 (Actions가 실제 기록으로 교체, 직접 편집 금지)
   stats/

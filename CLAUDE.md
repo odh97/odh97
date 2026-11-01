@@ -6,7 +6,7 @@
 | --- | --- | --- | --- |
 | 프로필 | `cards/profile/profile.svg` (위쪽만) | `cards/embed.mjs` (글꼴 삽입) | 같은 파일 |
 | 스킬 | `cards/skills/skills.svg` (위쪽만) | `cards/embed.mjs` (글꼴 삽입) | 같은 파일 |
-| 팩맨 | `cards/pacman/template.svg` | `cards/pacman/style.mjs` | `cards/pacman/pacman.svg` |
+| 잔디(아파트) | `cards/pacman/template.svg` (위쪽만) | `cards/pacman/style.mjs` (창문 색·고양이 `PLAYER`) | `cards/pacman/pacman.svg` |
 | 통계 | `cards/stats/template.svg` | `cards/stats/update.mjs` | `cards/stats/stats.svg` |
 
 - **`cards/pacman/pacman.svg`는 약 250KB짜리 생성물입니다. 절대 읽거나 편집하지 마세요.** 프레임은 `template.svg`, 색상 매핑은 `style.mjs`의 `colors`에서 수정하고 `node cards/pacman/style.mjs`로 다시 생성합니다.

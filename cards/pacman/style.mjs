@@ -16,17 +16,46 @@ const attr = (tag, name) => Number(tag.match(new RegExp(`\\b${name}="([\\d.]+)"`
 const right = Math.max(...cells.map(([tag]) => attr(tag, 'x') + attr(tag, 'width')));
 const bottom = Math.max(...cells.map(([tag]) => attr(tag, 'y') + attr(tag, 'height')));
 if (!Number.isFinite(right + bottom)) throw new Error('Invalid grid bounds');
+// 업스트림 색(라이트·다크)과 이전 스타일 색 → 아파트 외벽·창문 불빛 색. 키는 소문자.
+// 배경·벽 → 외벽(#1C2250), 기여 0 → 꺼진 창문, 1~4 → 점점 밝아지는 불빛
 const colors = {
-  '#ffffff': '#151C30', '#0d1117': '#151C30', '#202841': '#151C30',
-  '#ebedf0': '#28324D', '#161b22': '#28324D', '#2b3552': '#28324D',
-  '#9be9a8': '#514477', '#0e4429': '#514477',
-  '#40c463': '#7560A8', '#006d32': '#7560A8',
-  '#30a14e': '#9786EC', '#26a641': '#9786EC',
-  '#216e39': '#C7B8FF', '#39d353': '#C7B8FF',
-  '#57606a': '#ADB9DA', '#8b949e': '#ADB9DA',
-  '#000000': '#111526',
+  '#ffffff': '#1C2250', '#0d1117': '#1C2250', '#202841': '#1C2250', '#151c30': '#1C2250', '#0e1230': '#1C2250', '#000000': '#1C2250', '#111526': '#1C2250',
+  '#ebedf0': '#141A3F', '#161b22': '#141A3F', '#2b3552': '#141A3F', '#28324d': '#141A3F', '#222a5e': '#141A3F',
+  '#9be9a8': '#5A4A3A', '#0e4429': '#5A4A3A', '#514477': '#5A4A3A', '#3b348f': '#5A4A3A',
+  '#40c463': '#B07A3A', '#006d32': '#B07A3A', '#7560a8': '#B07A3A', '#5b4fc9': '#B07A3A',
+  '#30a14e': '#E9A04F', '#26a641': '#E9A04F', '#9786ec': '#E9A04F', '#8e7ff0': '#E9A04F',
+  '#216e39': '#F6DF5A', '#39d353': '#F6DF5A', '#c7b8ff': '#F6DF5A', '#cfc4ff': '#F6DF5A',
+  '#57606a': '#8E93C9', '#8b949e': '#8E93C9', '#adb9da': '#8E93C9',
 };
 graph = graph.replace(/#[\da-f]{6}\b/gi, color => colors[color.toLowerCase()] || color);
+// 잔디 칸 = 창문: 둥근 모서리를 거의 네모로
+graph = graph.replace(/(<rect\b[^>]*\bid="c-\d+-\d+"[^>]*?)\brx="[\d.]+"/g, '$1rx="1"');
+// 팩맨 → 캐릭터 그림 속 회색 줄무늬 고양이 (12×12, 한 칸 = 2단위, 팩맨 자리 20×20 기준 가운데 정렬)
+// O 흰 외곽선 · K 털 · k 줄무늬 · N 귀 안쪽/코 · D 감은 눈 · C 흰 주둥이 · B 볼터치
+// 이동(translate) 애니메이션만 유지하고, 회전·입 모양·색 변경은 뺍니다.
+const PLAYER = [
+  '.OO......OO.',
+  'OKNO....ONKO',
+  'OKKKOOOOKKKO',
+  'OKkKKkkKKkKO',
+  'OKKKKKKKKKKO',
+  'OKDDKKKKDDKO',
+  'OKKKKCCKKKKO',
+  'OBKCCNNCCKBO',
+  'OKKCCCCCCKKO',
+  '.OKKCCCCKKO.',
+  '..OKKKKKKO..',
+  '...OOOOOO...',
+];
+const PLAYER_COLORS = { O: '#F4F1FF', K: '#A9A9B8', k: '#76768A', N: '#F08A9A', D: '#2B2233', C: '#F4F1FF', B: '#F08A9A' };
+const sprite = PLAYER.flatMap((row, y) => [...row].map((c, x) => PLAYER_COLORS[c]
+  ? `<rect x="${x * 2 - 2}" y="${y * 2 - 2}" width="2" height="2" fill="${PLAYER_COLORS[c]}"/>` : '')).join('');
+const player = graph.match(/<(path|g) id="pacman"[\s\S]*?<\/\1>/);
+if (player) {
+  const move = player[0].match(/<animateTransform\b[^>]*type="translate"[^>]*\/>/)?.[0];
+  if (!move) throw new Error('Pac-Man movement animation missing');
+  graph = graph.replace(player[0], () => `<g id="pacman" shape-rendering="crispEdges">${sprite}${move}</g>`);
+}
 // Keep the real first frame visible in viewers that do not animate SVGs.
 graph = graph.replace(/<rect\b[^>]*\bid="c-\d+-\d+"[^>]*>[\s\S]*?<\/rect>/g, cell => {
   const initialFill = cell.match(/<animate\b[^>]*attributeName="fill"[^>]*values="(#[\da-f]+);/i)?.[1];
@@ -34,20 +63,16 @@ graph = graph.replace(/<rect\b[^>]*\bid="c-\d+-\d+"[^>]*>[\s\S]*?<\/rect>/g, cel
 });
 const graphWidth = right + 4;
 const graphHeight = bottom + 4;
-const displayHeight = Math.ceil(graphHeight * 868 / graphWidth);
-const boardBottom = 112 + displayHeight + 16;
-const height = boardBottom + 62;
+// 레이아웃은 template.svg에 고정(카드 960×290). 그래프는 외벽 안 폭 848에 맞춰 높이만 계산.
+const displayHeight = Math.ceil(graphHeight * 848 / graphWidth);
 const template = await readFile(new URL('./template.svg', import.meta.url), 'utf8');
 const vars = {
-  height, panelHeight: height - 24, boardHeight: boardBottom - 94,
   graphDisplayHeight: displayHeight, graphWidth, graphHeight, graph,
-  legendTextY: boardBottom + 27, legendRectY: boardBottom + 16,
-  desc: sample ? 'Style preview with upstream sample data, not odh97 contributions.' : 'odh97 contribution calendar as a Pac-Man animation.',
-  caption: sample ? 'STYLE PREVIEW · SAMPLE DATA' : 'YOUR YEAR IN CONTRIBUTIONS',
+  desc: sample ? 'Style preview with upstream sample data, not odh97 contributions.' : 'odh97 contribution calendar as lit apartment windows, animated.',
 };
 source = template.replace(/\{\{(\w+)\}\}/g, (_, k) => {
   if (!(k in vars)) throw new Error('Unknown template key: ' + k);
   return String(vars[k]);
 });
 await writeFile(output, source, 'utf8');
-console.log(`Pac-Man styled: ${cells.length} cells; full grid ${graphWidth} x ${graphHeight}; equal board margins.`);
+console.log(`Contributions card styled: ${cells.length} cells; full grid ${graphWidth} x ${graphHeight}; equal board margins.`);

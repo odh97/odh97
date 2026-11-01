@@ -2,6 +2,6 @@
 <img src="./cards/profile/profile.svg" width="960" alt="O_Dae ✦ · Frontend Developer · 오대현 · odh97 · 서비스를 이해할수록 개발이 더 재미있어집니다." />
 <img src="./cards/skills/skills.svg" width="960" alt="기술: JavaScript, TypeScript, React, Next.js, Tailwind CSS, React Query, Zustand, Node.js, Express, NestJS" />
 
-<img src="./cards/pacman/pacman.svg" width="960" alt="기여 기록 위를 움직이는 팩맨 애니메이션. SAMPLE DATA 표시가 있으면 공식 예시 데이터입니다." />
+<img src="./cards/pacman/pacman.svg" width="960" alt="odh97의 최근 1년 기여 기록 애니메이션" />
 
 [![GitHub 통계: 공개 저장소·원본 저장소 stars/forks·팔로워](./cards/stats/stats.svg)](https://github.com/odh97?tab=repositories)

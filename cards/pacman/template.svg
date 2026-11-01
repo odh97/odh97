@@ -1,34 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="{{height}}" viewBox="0 0 960 {{height}}" role="img" aria-labelledby="pacman-title pacman-desc">
-  <title id="pacman-title">Pac-Man Contribution Arcade</title>
-  <desc id="pacman-desc">{{desc}}</desc>
-  <defs>
-    <linearGradient id="pacman-panel" x2="0" y2="1">
-      <stop stop-color="#242D47"/><stop offset="1" stop-color="#1B2339"/>
-    </linearGradient>
-    <linearGradient id="pacman-accent">
-      <stop stop-color="#9786EC"/><stop offset="1" stop-color="#BDEDDD"/>
-    </linearGradient>
-  </defs>
-  <rect width="960" height="{{height}}" rx="16" fill="#111526"/>
-  <rect x="16" y="8" width="928" height="{{panelHeight}}" rx="7" fill="url(#pacman-panel)" stroke="#9786EC" stroke-width="2"/>
-  <rect x="34" y="28" width="44" height="44" rx="12" fill="#383647" stroke="#61536B"/>
-  <path d="M65 41A13 13 0 1 0 65 59L56 50Z" fill="#F4D77D"/>
-  <circle cx="68" cy="50" r="2" fill="#F4D77D"/>
-  <g font-family="Arial,sans-serif">
-    <text x="92" y="48" font-size="24" font-weight="700" letter-spacing="1" fill="#F2EFFC">PAC-MAN</text>
-    <text x="93" y="67" font-size="10" letter-spacing="2.2" fill="#BEB2F3">CONTRIBUTION ARCADE</text>
-    <rect x="806" y="36" width="120" height="28" rx="14" fill="#29354A" stroke="#425369"/>
-    <circle cx="823" cy="50" r="3" fill="#BDEDDD"/>
-    <text x="837" y="54" font-size="10" letter-spacing="1.2" fill="#BDEDDD">AUTO PLAY</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="290" viewBox="0 0 960 290" role="img" aria-labelledby="contrib-title contrib-desc">
+  <title id="contrib-title">odh97 contributions</title>
+  <desc id="contrib-desc">{{desc}}</desc>
+  <rect width="960" height="290" fill="#0E1230"/>
+  <rect x="20" y="12" width="920" height="266" fill="#141A3F"/>
+  <g fill="#B6A6FF"><rect x="20" y="8" width="920" height="4"/><rect x="20" y="278" width="920" height="4"/><rect x="16" y="12" width="4" height="266"/><rect x="940" y="12" width="4" height="266"/></g>
+
+  <!-- 아래 좌표는 모두 패널(20,12) 기준. 장면: 하늘 → 옥상 → 아파트 외벽(창문 = 잔디) → 화단 → 산책로 → 잔디밭 -->
+  <g transform="translate(20 12)">
+    <g shape-rendering="crispEdges" aria-hidden="true">
+      <!-- 하늘: 별 · 반짝이 · 초승달 · 별똥별 -->
+      <path d="M80 12h3v3h-3zM300 26h3v3h-3zM870 40h3v3h-3zM860 10h3v3h-3z" fill="#5CD6F2"/>
+      <path d="M420 20h3v3h-3zM900 34h3v3h-3z" fill="#F6DF5A"/>
+      <path transform="translate(340 4) scale(3)" d="M2 0h4v1H2zM1 1h2v1H1zM0 2h2v4H0zM1 6h2v1H1zM2 7h4v1H2z" fill="#F6DF5A"/>
+      <path transform="translate(250 8) scale(3)" d="M2 0h1v5H2zM0 2h5v1H0z" fill="#F6DF5A"/>
+      <path transform="translate(560 8) scale(3)" d="M0 0h2v1H0zM2 1h2v1H2zM4 2h2v1H4z" fill="#3B348F"/>
+      <path transform="translate(560 8) scale(3)" d="M6 3h2v1H6zM8 4h2v2H8z" fill="#F4F1FF"/>
+      <!-- 옥상: 왼쪽 안테나 · 화분 · 오른쪽 위성 안테나 -->
+      <rect x="196" y="8" width="3" height="32" fill="#2A2F66"/><rect x="192" y="4" width="11" height="5" fill="#2A2F66"/><rect x="196" y="0" width="3" height="4" fill="#B6A6FF"/>
+      <path d="M422 32h14v8h-14zM420 30h18v2h-18z" fill="#E8E4F4"/>
+      <path d="M428 18h2v12h-2zM422 22h6v2h-6zM420 20h4v2h-4zM430 21h6v2h-6zM434 19h4v2h-4zM424 26h4v2h-4zM430 25h5v2h-5z" fill="#66B94A"/>
+      <path d="M420 20h2v2h-2zM436 19h2v2h-2z" fill="#4E9A4A"/>
+      <path d="M736 32h4v8h-4zM730 38h16v2h-16z" fill="#2A2F66"/>
+      <path d="M724 18h4v2h-4zM722 20h4v6h-4zM724 26h4v2h-4zM728 28h8v2h-8zM736 26h4v2h-4z" fill="#353B78"/>
+      <path d="M726 20h2v6h-2zM728 22h6v4h-6z" fill="#232A60"/>
+      <path d="M732 16h2v8h-2z" fill="#4E4A9E"/>
+      <path d="M731 14h4v3h-4z" fill="#F08A9A"/>
+      <!-- 외벽 -->
+      <rect x="24" y="40" width="872" height="10" fill="#2A2F66"/>
+      <rect x="24" y="50" width="872" height="150" fill="#1C2250"/>
+      <rect x="24" y="50" width="872" height="3" fill="#232A60"/>
+      <!-- 화단 · 산책로 · 가로등 · 벤치 · 꽃 -->
+      <rect x="0" y="200" width="920" height="66" fill="#16302C"/>
+      <path d="M24 194h36v6H24zM28 190h28v4H28zM84 194h44v6H84zM90 189h32v5H90zM180 194h30v6h-30zM184 190h22v4h-22zM250 194h48v6h-48zM256 189h36v5h-36zM360 194h34v6h-34zM364 190h26v4h-26zM430 194h40v6h-40zM436 189h28v5h-28zM520 194h36v6h-36zM524 190h28v4h-28zM600 194h46v6h-46zM606 189h34v5h-34zM700 194h30v6h-30zM704 190h22v4h-22zM770 194h44v6h-44zM776 189h32v5h-32zM850 194h46v6h-46zM856 190h34v4h-34z" fill="#21483B"/>
+      <path d="M32 191h4v2h-4zM98 190h4v2h-4zM262 190h4v2h-4zM442 190h4v2h-4zM612 190h4v2h-4zM782 190h4v2h-4zM862 191h4v2h-4z" fill="#2E6150"/>
+      <rect x="0" y="222" width="920" height="22" fill="#2A2F66"/>
+      <rect x="0" y="222" width="920" height="2" fill="#353B78"/>
+      <rect x="0" y="242" width="920" height="2" fill="#20255A"/>
+      <path d="M22 224h2v18h-2zM58 224h2v18h-2zM94 224h2v18h-2zM130 224h2v18h-2zM166 224h2v18h-2zM202 224h2v18h-2zM238 224h2v18h-2zM274 224h2v18h-2zM310 224h2v18h-2zM346 224h2v18h-2zM382 224h2v18h-2zM418 224h2v18h-2zM454 224h2v18h-2zM490 224h2v18h-2zM526 224h2v18h-2zM562 224h2v18h-2zM598 224h2v18h-2zM634 224h2v18h-2zM670 224h2v18h-2zM706 224h2v18h-2zM742 224h2v18h-2zM778 224h2v18h-2zM814 224h2v18h-2zM850 224h2v18h-2zM886 224h2v18h-2zM0 232h920v1H0z" fill="#232861"/>
+      <path d="M150 204h3v18h-3zM480 204h3v18h-3zM810 204h3v18h-3z" fill="#353B78"/>
+      <path d="M146 199h11v5h-11zM476 199h11v5h-11zM806 199h11v5h-11z" fill="#F6DF5A"/>
+      <path d="M140 206h23v2h-23zM470 206h23v2h-23zM800 206h23v2h-23z" fill="#F6DF5A" opacity="0.25"/>
+      <path d="M640 212h28v3h-28zM642 215h3v5h-3zM663 215h3v5h-3zM640 208h28v2h-28z" fill="#6B4A2E"/>
+      <path d="M60 252h3v3h-3zM212 256h3v3h-3zM404 250h3v3h-3zM700 254h3v3h-3zM868 252h3v3h-3z" fill="#F08A9A"/>
+      <path d="M120 256h3v3h-3zM330 252h3v3h-3zM560 256h3v3h-3zM760 250h3v3h-3z" fill="#F6DF5A"/>
+      <path d="M260 250h3v3h-3zM620 252h3v3h-3z" fill="#F4F1FF"/>
+      <!-- 범례: 창문 불빛 5단계 (꺼짐 → 밝음) -->
+      <rect x="800" y="16" width="12" height="12" fill="#141A3F"/><rect x="818" y="16" width="12" height="12" fill="#5A4A3A"/><rect x="836" y="16" width="12" height="12" fill="#B07A3A"/><rect x="854" y="16" width="12" height="12" fill="#E9A04F"/><rect x="872" y="16" width="12" height="12" fill="#F6DF5A"/>
+    </g>
+
+    <!-- 명령 줄 -->
+    <g font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="600">
+      <text x="24" y="26" fill="#5CD6F2">$</text>
+      <text x="40" y="26" fill="#F4F1FF">git log --graph</text>
+    </g>
+
+    <!-- 잔디(창문) 애니메이션: style.mjs가 업스트림 그래프를 넣습니다 -->
+    <svg data-pacman-graph="true" x="36" y="56" width="848" height="{{graphDisplayHeight}}" viewBox="-2 -2 {{graphWidth}} {{graphHeight}}" preserveAspectRatio="xMidYMid meet">{{graph}}</svg>
   </g>
-  <rect x="34" y="94" width="892" height="{{boardHeight}}" rx="10" fill="#151C30" stroke="#3D4664"/>
-  <rect x="48" y="94" width="88" height="2" rx="1" fill="url(#pacman-accent)"/>
-  <svg data-pacman-graph="true" x="46" y="112" width="868" height="{{graphDisplayHeight}}" viewBox="-2 -2 {{graphWidth}} {{graphHeight}}" preserveAspectRatio="xMidYMid meet">{{graph}}</svg>
-  <!-- Everything after the nested SVG is presentation, not game content. -->
-  <g font-family="Arial,sans-serif" font-size="10" fill="#ADB9DA">
-    <text x="34" y="{{legendTextY}}" letter-spacing="1">{{caption}}</text>
-    <text x="748" y="{{legendTextY}}">LESS</text>
-    <rect x="782" y="{{legendRectY}}" width="14" height="14" rx="3" fill="#28324D"/><rect x="802" y="{{legendRectY}}" width="14" height="14" rx="3" fill="#514477"/><rect x="822" y="{{legendRectY}}" width="14" height="14" rx="3" fill="#7560A8"/><rect x="842" y="{{legendRectY}}" width="14" height="14" rx="3" fill="#9786EC"/><rect x="862" y="{{legendRectY}}" width="14" height="14" rx="3" fill="#C7B8FF"/>
-    <text x="896" y="{{legendTextY}}">MORE</text>
-  </g>
+
+  <!-- 아래는 생성되는 글꼴 데이터입니다. 읽거나 직접 수정하지 말고 node cards/embed.mjs cards/pacman/template.svg로 다시 넣으세요. -->
+  <style id="embedded-fonts" data-families="JetBrains+Mono:wght@600">@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 600; src: url(data:font/woff2;base64,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) format('woff2'); unicode-range: U+20, U+24, U+2d, U+61, U+67-69, U+6c, U+6f-70, U+72, U+74; }</style>
 </svg>
