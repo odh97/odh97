@@ -14,3 +14,4 @@
 - 템플릿의 `{{key}}` 자리표시자는 각 `.mjs`가 채웁니다. 키를 추가하면 스크립트의 `vars`에도 추가해야 합니다.
 - 카페 카드는 `cards/github.mjs`(API·템플릿 공용 헬퍼)를 씁니다. `tmux.svg` 끝에는 base64 글꼴이 붙으니 읽지 말고 `template.svg`를 보세요. 쇼윈도 안 좌표 규칙은 템플릿 주석에 있습니다. 로직을 바꾸면 `node --test cards/tmux/update.test.mjs`. 기여 기록은 GraphQL이라 토큰이 필요해 로컬에선 `--`로 남습니다.
 - 워크플로: `contribution-previews.yml`(아파트 잔디), `extra-cards.yml`(카페 카드).
+- 카드를 고쳤는데 GitHub에서 안 바뀌어 보이면 브라우저 캐시입니다. README의 이미지 주소 뒤 `?v=` 숫자를 올리세요(예: `profile.svg?v=3`). SVG 애니메이션은 CSS `@keyframes`로 넣으세요(프로필 커서 참고).
