@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="cafe-title cafe-desc">
   <title id="cafe-title">odh97 languages, contributions and recent activity</title>
-  <desc id="cafe-desc">Languages: JavaScript 30.6%, CSS 25.5%, TypeScript 19.4%, HTML 16.1%, SCSS 5.8%, Other 2.7%. Last year: 2576 contributions, 243 active days, longest streak 19 days, best day 42. Recent: 10-29 PUSH odh97/posong; 10-23 PUSH odh97/posong; 10-21 PUSH odh97/posong; 10-19 STAR goldbergyoni/nodebestpractices; 10-18 STAR morluto/rea.</desc>
+  <desc id="cafe-desc">Languages: JavaScript 30.6%, CSS 25.5%, TypeScript 19.4%, HTML 16.1%, SCSS 5.8%, Other 2.7%. Last year: 2581 contributions, 243 active days, longest streak 19 days, best day 42. Recent: 10-29 PUSH odh97/posong; 10-23 PUSH odh97/posong; 10-21 PUSH odh97/posong; 10-19 STAR goldbergyoni/nodebestpractices; 10-18 STAR morluto/rea.</desc>
   <rect width="960" height="440" fill="#0E1230"/>
   <rect x="20" y="12" width="920" height="416" fill="#141A3F"/>
   <g fill="#B6A6FF"><rect x="20" y="8" width="920" height="4"/><rect x="20" y="428" width="920" height="4"/><rect x="16" y="12" width="4" height="416"/><rect x="940" y="12" width="4" height="416"/></g>
@@ -68,8 +68,8 @@
       <rect y="30" width="760" height="4" fill="#E9A04F"/>
       <g shape-rendering="crispEdges"><rect x="14" y="10" width="9" height="9" fill="#F6DF5A"/><rect x="30" y="10" width="9" height="9" fill="#5CD6F2"/><rect x="46" y="10" width="9" height="9" fill="#B6A6FF"/></g>
       <g font-weight="500" fill="#8E93C9">
-        <text x="65" y="19" font-size="11">odh97@github: ~ — tmux</text>
-        <text x="746" y="19" font-size="10" text-anchor="end">[0] 1:langs 2:log 3:activity</text>
+        <text x="65" y="19" font-size="12">odh97@github: ~ — tmux</text>
+        <text x="746" y="19" font-size="11" text-anchor="end">[0] 1:langs 2:log 3:activity</text>
       </g>
       <!-- 창 구분: 왼쪽 0~310 · 세로선 310~314 · 오른쪽 314~760 (위 34~130 · 가로선 130~134 · 아래 134~258) -->
       <rect x="310" y="34" width="4" height="224" fill="#3A4280"/>
@@ -79,22 +79,22 @@
       <text x="18" y="60" font-size="12" font-weight="700" fill="#5CD6F2">$</text>
       <text x="32" y="60" font-size="12" font-weight="700" fill="#F4F1FF">cat languages.txt</text>
       <g shape-rendering="crispEdges"><rect x="18" y="70" width="84" height="12" fill="#B6A6FF"/><rect x="102" y="70" width="70" height="12" fill="#5CD6F2"/><rect x="172" y="70" width="53" height="12" fill="#F6DF5A"/><rect x="225" y="70" width="44" height="12" fill="#E9A04F"/><rect x="269" y="70" width="16" height="12" fill="#F08A9A"/><rect x="285" y="70" width="7" height="12" fill="#4E4A9E"/></g>
-      <g font-size="12" font-weight="500"><rect x="18" y="95" width="9" height="9" fill="#B6A6FF" shape-rendering="crispEdges"/><text x="34" y="104" fill="#F4F1FF">JavaScript</text><text x="292" y="104" text-anchor="end" fill="#8E93C9">30.6%</text><rect x="18" y="121" width="9" height="9" fill="#5CD6F2" shape-rendering="crispEdges"/><text x="34" y="130" fill="#F4F1FF">CSS</text><text x="292" y="130" text-anchor="end" fill="#8E93C9">25.5%</text><rect x="18" y="147" width="9" height="9" fill="#F6DF5A" shape-rendering="crispEdges"/><text x="34" y="156" fill="#F4F1FF">TypeScript</text><text x="292" y="156" text-anchor="end" fill="#8E93C9">19.4%</text><rect x="18" y="173" width="9" height="9" fill="#E9A04F" shape-rendering="crispEdges"/><text x="34" y="182" fill="#F4F1FF">HTML</text><text x="292" y="182" text-anchor="end" fill="#8E93C9">16.1%</text><rect x="18" y="199" width="9" height="9" fill="#F08A9A" shape-rendering="crispEdges"/><text x="34" y="208" fill="#F4F1FF">SCSS</text><text x="292" y="208" text-anchor="end" fill="#8E93C9">5.8%</text><rect x="18" y="225" width="9" height="9" fill="#4E4A9E" shape-rendering="crispEdges"/><text x="34" y="234" fill="#F4F1FF">Other</text><text x="292" y="234" text-anchor="end" fill="#8E93C9">2.7%</text></g>
+      <g font-size="13" font-weight="500"><rect x="18" y="95" width="9" height="9" fill="#B6A6FF" shape-rendering="crispEdges"/><text x="34" y="104" fill="#F4F1FF">JavaScript</text><text x="292" y="104" text-anchor="end" fill="#8E93C9">30.6%</text><rect x="18" y="121" width="9" height="9" fill="#5CD6F2" shape-rendering="crispEdges"/><text x="34" y="130" fill="#F4F1FF">CSS</text><text x="292" y="130" text-anchor="end" fill="#8E93C9">25.5%</text><rect x="18" y="147" width="9" height="9" fill="#F6DF5A" shape-rendering="crispEdges"/><text x="34" y="156" fill="#F4F1FF">TypeScript</text><text x="292" y="156" text-anchor="end" fill="#8E93C9">19.4%</text><rect x="18" y="173" width="9" height="9" fill="#E9A04F" shape-rendering="crispEdges"/><text x="34" y="182" fill="#F4F1FF">HTML</text><text x="292" y="182" text-anchor="end" fill="#8E93C9">16.1%</text><rect x="18" y="199" width="9" height="9" fill="#F08A9A" shape-rendering="crispEdges"/><text x="34" y="208" fill="#F4F1FF">SCSS</text><text x="292" y="208" text-anchor="end" fill="#8E93C9">5.8%</text><rect x="18" y="225" width="9" height="9" fill="#4E4A9E" shape-rendering="crispEdges"/><text x="34" y="234" fill="#F4F1FF">Other</text><text x="292" y="234" text-anchor="end" fill="#8E93C9">2.7%</text></g>
 
       <!-- 오른쪽 위: 기여 기록 (열 x 332 / 437 / 542 / 647) -->
       <text x="332" y="59" font-size="12" font-weight="700" fill="#5CD6F2">$</text>
       <text x="346" y="59" font-size="12" font-weight="700" fill="#F4F1FF">cat streak.txt</text>
-      <g font-size="9" font-weight="500" fill="#8E93C9">
+      <g font-size="11" font-weight="500" fill="#A9AEDB">
         <text x="332" y="82">CONTRIB · 1Y</text><text x="437" y="82">ACTIVE DAYS</text><text x="542" y="82">LONGEST</text><text x="647" y="82">BEST DAY</text>
       </g>
-      <g font-size="20" font-weight="700">
-        <text x="332" y="106" fill="#B6A6FF">2576</text><text x="437" y="106" fill="#F6DF5A">243</text><text x="542" y="106" fill="#5CD6F2">19d</text><text x="647" y="106" fill="#F4F1FF">42</text>
+      <g font-size="22" font-weight="700">
+        <text x="332" y="106" fill="#B6A6FF">2581</text><text x="437" y="106" fill="#F6DF5A">243</text><text x="542" y="106" fill="#5CD6F2">19d</text><text x="647" y="106" fill="#F4F1FF">42</text>
       </g>
 
-      <!-- 오른쪽 아래: 최근 활동 (날짜 x332 · 종류 x384 · 저장소 x442 · 내용 오른쪽 끝 x742, y174부터 18 간격) -->
+      <!-- 오른쪽 아래: 최근 활동 (날짜 x332 · 종류 x384 · 저장소 x448 · 내용 오른쪽 끝 x742, y174부터 18 간격) -->
       <text x="332" y="155" font-size="12" font-weight="700" fill="#5CD6F2">$</text>
       <text x="346" y="155" font-size="12" font-weight="700" fill="#F4F1FF">tail -n 5 activity.log</text>
-      <g font-size="12" font-weight="500"><text x="332" y="174" fill="#5CD6F2">10-29</text><text x="384" y="174" font-weight="700" fill="#B6A6FF">PUSH</text><text x="442" y="174" fill="#F4F1FF">odh97/posong</text><text x="742" y="174" text-anchor="end" fill="#8E93C9">dev</text><text x="332" y="192" fill="#5CD6F2">10-23</text><text x="384" y="192" font-weight="700" fill="#B6A6FF">PUSH</text><text x="442" y="192" fill="#F4F1FF">odh97/posong</text><text x="742" y="192" text-anchor="end" fill="#8E93C9">dev</text><text x="332" y="210" fill="#5CD6F2">10-21</text><text x="384" y="210" font-weight="700" fill="#B6A6FF">PUSH</text><text x="442" y="210" fill="#F4F1FF">odh97/posong</text><text x="742" y="210" text-anchor="end" fill="#8E93C9">dev</text><text x="332" y="228" fill="#5CD6F2">10-19</text><text x="384" y="228" font-weight="700" fill="#E9A04F">STAR</text><text x="442" y="228" fill="#F4F1FF">goldbergyoni/nodebestpractices</text><text x="332" y="246" fill="#5CD6F2">10-18</text><text x="384" y="246" font-weight="700" fill="#E9A04F">STAR</text><text x="442" y="246" fill="#F4F1FF">morluto/rea</text></g>
+      <g font-size="13" font-weight="500"><text x="332" y="174" fill="#5CD6F2">10-29</text><text x="384" y="174" font-weight="700" fill="#B6A6FF">PUSH</text><text x="448" y="174" fill="#F4F1FF">odh97/posong</text><text x="742" y="174" text-anchor="end" fill="#A9AEDB">dev</text><text x="332" y="192" fill="#5CD6F2">10-23</text><text x="384" y="192" font-weight="700" fill="#B6A6FF">PUSH</text><text x="448" y="192" fill="#F4F1FF">odh97/posong</text><text x="742" y="192" text-anchor="end" fill="#A9AEDB">dev</text><text x="332" y="210" fill="#5CD6F2">10-21</text><text x="384" y="210" font-weight="700" fill="#B6A6FF">PUSH</text><text x="448" y="210" fill="#F4F1FF">odh97/posong</text><text x="742" y="210" text-anchor="end" fill="#A9AEDB">dev</text><text x="332" y="228" fill="#5CD6F2">10-19</text><text x="384" y="228" font-weight="700" fill="#E9A04F">STAR</text><text x="448" y="228" fill="#F4F1FF">goldbergyoni/nodebestpractices</text><text x="332" y="246" fill="#5CD6F2">10-18</text><text x="384" y="246" font-weight="700" fill="#E9A04F">STAR</text><text x="448" y="246" fill="#F4F1FF">morluto/rea</text></g>
     </g>
   </g>
 
