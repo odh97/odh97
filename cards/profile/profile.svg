@@ -34,7 +34,7 @@
   <text x="48" y="238" font-family="'IBM Plex Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif" font-size="17" font-weight="500" fill="#F4F1FF">서비스를 이해할수록 개발이 더 재미있어집니다.</text>
   <rect x="381" y="222" width="10" height="20" fill="#F6DF5A" shape-rendering="crispEdges">
     <!-- 터미널 커서처럼 0.5초 켜짐 / 0.5초 꺼짐 -->
-    <animate attributeName="opacity" values="1;0" dur="1s" calcMode="discrete" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0" keyTimes="0;0.5" dur="1s" begin="0s" calcMode="discrete" repeatCount="indefinite"/>
   </rect>
 
   <!-- 아래는 생성되는 글꼴 데이터입니다. 읽거나 직접 수정하지 말고 node cards/embed.mjs cards/profile/profile.svg로 다시 넣으세요. -->
