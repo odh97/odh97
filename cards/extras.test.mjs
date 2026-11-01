@@ -12,11 +12,11 @@ test('languages: top 5 + Other, shares sum to 1', () => {
   assert.match(renderLanguages([]), /AWAITING FIRST SYNC/);
 });
 
-test('streak: today without contributions does not break the current streak', () => {
+test('streak: active days, longest run, best day', () => {
   const day = (date, contributionCount) => ({ date, contributionCount });
   const stats = computeStreak({ total: 9, days: [day('2026-10-26', 1), day('2026-10-27', 0), day('2026-10-28', 2), day('2026-10-29', 3), day('2026-10-30', 1), day('2026-10-31', 0)] });
-  assert.deepEqual(stats, { total: 9, current: 3, longest: 3, best: 3 });
-  assert.match(renderStreak(stats, '2026-11-01 00:00'), /3 days/);
+  assert.deepEqual(stats, { total: 9, active: 4, longest: 3, best: 3 });
+  assert.match(renderStreak(stats, '2026-11-01 00:00'), /4 days/);
   assert.match(renderStreak(null, null), /AWAITING FIRST SYNC/);
 });
 

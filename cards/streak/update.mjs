@@ -16,25 +16,22 @@ export async function collectCalendar(api = github()) {
   return { total: calendar.totalContributions, days: calendar.weeks.flatMap(w => w.contributionDays) };
 }
 
-// 오늘 아직 기여가 없으면 어제부터 셉니다.
+// 활동한 날(기여가 1회 이상인 날) · 최장 연속 · 하루 최다. 현재 연속은 쉬면 0이 되어 부담이라 쓰지 않습니다.
 export function computeStreak({ total, days }) {
   const counts = [...days].sort((a, b) => a.date.localeCompare(b.date)).map(d => d.contributionCount);
-  let end = counts.length - 1;
-  if (end >= 0 && counts[end] === 0) end--;
-  let current = 0;
-  for (let i = end; i >= 0 && counts[i] > 0; i--) current++;
+  const active = counts.filter(c => c > 0).length;
   let longest = 0, run = 0;
   for (const c of counts) { run = c > 0 ? run + 1 : 0; longest = Math.max(longest, run); }
-  return { total, current, longest, best: Math.max(0, ...counts) };
+  return { total, active, longest, best: Math.max(0, ...counts) };
 }
 
 const days = n => `${n} day${n === 1 ? '' : 's'}`;
 
 export function renderStreak(stats, time) {
   return fill(template, {
-    desc: stats ? `Contributions in the last year: ${stats.total}. Current streak: ${days(stats.current)}. Longest streak: ${days(stats.longest)}. Best day: ${stats.best}.` : 'Not initialized.',
+    desc: stats ? `Contributions in the last year: ${stats.total}. Active days: ${days(stats.active)}. Longest streak: ${days(stats.longest)}. Best day: ${stats.best}.` : 'Not initialized.',
     total: stats?.total ?? '--',
-    current: stats ? days(stats.current) : '--',
+    active: stats ? days(stats.active) : '--',
     longest: stats ? days(stats.longest) : '--',
     best: stats?.best ?? '--',
     footer: time ? `UPDATED ${time} / UTC` : 'AWAITING FIRST SYNC / RUN GITHUB ACTIONS',

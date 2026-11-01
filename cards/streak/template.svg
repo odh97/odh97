@@ -13,10 +13,10 @@
       <rect x="45" y="61" width="204" height="82"/><rect x="267" y="61" width="204" height="82"/><rect x="489" y="61" width="204" height="82"/><rect x="711" y="61" width="204" height="82"/>
     </g>
     <g font-size="11" font-weight="500" fill="#8E93C9">
-      <text x="62" y="86">CONTRIBUTIONS · 1Y</text><text x="284" y="86">CURRENT STREAK</text><text x="506" y="86">LONGEST STREAK</text><text x="728" y="86">BEST DAY</text>
+      <text x="62" y="86">CONTRIBUTIONS · 1Y</text><text x="284" y="86">ACTIVE DAYS</text><text x="506" y="86">LONGEST STREAK</text><text x="728" y="86">BEST DAY</text>
     </g>
     <g font-size="28" font-weight="700">
-      <text x="62" y="126" fill="#B6A6FF">{{total}}</text><text x="284" y="126" fill="#F6DF5A">{{current}}</text><text x="506" y="126" fill="#5CD6F2">{{longest}}</text><text x="728" y="126" fill="#F4F1FF">{{best}}</text>
+      <text x="62" y="126" fill="#B6A6FF">{{total}}</text><text x="284" y="126" fill="#F6DF5A">{{active}}</text><text x="506" y="126" fill="#5CD6F2">{{longest}}</text><text x="728" y="126" fill="#F4F1FF">{{best}}</text>
     </g>
     <text x="44" y="170" font-size="11" font-weight="500" fill="#8E93C9">{{footer}}</text>
     <text x="916" y="170" text-anchor="end" font-size="11" font-weight="500" fill="#8E93C9">PUBLIC + PRIVATE COUNTS · DAILY SYNC</text>
