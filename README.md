@@ -9,3 +9,5 @@
 <img src="./cards/activity/activity.svg" width="960" alt="최근 공개 활동 5개" />
 
 [![GitHub 통계: 공개 저장소·원본 저장소 stars/forks·팔로워](./cards/stats/stats.svg)](https://github.com/odh97?tab=repositories)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:3B348F,100:0E1230&height=100&section=footer" width="960" alt="" />
