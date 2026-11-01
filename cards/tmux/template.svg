@@ -68,8 +68,8 @@
       <rect y="30" width="760" height="4" fill="#E9A04F"/>
       <g shape-rendering="crispEdges"><rect x="14" y="10" width="9" height="9" fill="#F6DF5A"/><rect x="30" y="10" width="9" height="9" fill="#5CD6F2"/><rect x="46" y="10" width="9" height="9" fill="#B6A6FF"/></g>
       <g font-weight="500" fill="#8E93C9">
-        <text x="65" y="19" font-size="11">odh97@github: ~ — tmux</text>
-        <text x="746" y="19" font-size="10" text-anchor="end">[0] 1:langs 2:log 3:activity</text>
+        <text x="65" y="19" font-size="12">odh97@github: ~ — tmux</text>
+        <text x="746" y="19" font-size="11" text-anchor="end">[0] 1:langs 2:log 3:activity</text>
       </g>
       <!-- 창 구분: 왼쪽 0~310 · 세로선 310~314 · 오른쪽 314~760 (위 34~130 · 가로선 130~134 · 아래 134~258) -->
       <rect x="310" y="34" width="4" height="224" fill="#3A4280"/>
@@ -79,22 +79,22 @@
       <text x="18" y="60" font-size="12" font-weight="700" fill="#5CD6F2">$</text>
       <text x="32" y="60" font-size="12" font-weight="700" fill="#F4F1FF">cat languages.txt</text>
       <g shape-rendering="crispEdges">{{langBar}}</g>
-      <g font-size="12" font-weight="500">{{langList}}</g>
+      <g font-size="13" font-weight="500">{{langList}}</g>
 
       <!-- 오른쪽 위: 기여 기록 (열 x 332 / 437 / 542 / 647) -->
       <text x="332" y="59" font-size="12" font-weight="700" fill="#5CD6F2">$</text>
       <text x="346" y="59" font-size="12" font-weight="700" fill="#F4F1FF">cat streak.txt</text>
-      <g font-size="9" font-weight="500" fill="#8E93C9">
+      <g font-size="11" font-weight="500" fill="#A9AEDB">
         <text x="332" y="82">CONTRIB · 1Y</text><text x="437" y="82">ACTIVE DAYS</text><text x="542" y="82">LONGEST</text><text x="647" y="82">BEST DAY</text>
       </g>
-      <g font-size="20" font-weight="700">
+      <g font-size="22" font-weight="700">
         <text x="332" y="106" fill="#B6A6FF">{{total}}</text><text x="437" y="106" fill="#F6DF5A">{{active}}</text><text x="542" y="106" fill="#5CD6F2">{{longest}}</text><text x="647" y="106" fill="#F4F1FF">{{best}}</text>
       </g>
 
-      <!-- 오른쪽 아래: 최근 활동 (날짜 x332 · 종류 x384 · 저장소 x442 · 내용 오른쪽 끝 x742, y174부터 18 간격) -->
+      <!-- 오른쪽 아래: 최근 활동 (날짜 x332 · 종류 x384 · 저장소 x448 · 내용 오른쪽 끝 x742, y174부터 18 간격) -->
       <text x="332" y="155" font-size="12" font-weight="700" fill="#5CD6F2">$</text>
       <text x="346" y="155" font-size="12" font-weight="700" fill="#F4F1FF">tail -n 5 activity.log</text>
-      <g font-size="12" font-weight="500">{{activityRows}}</g>
+      <g font-size="13" font-weight="500">{{activityRows}}</g>
     </g>
   </g>
 

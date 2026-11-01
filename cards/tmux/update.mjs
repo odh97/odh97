@@ -37,8 +37,8 @@ export function renderTmux({ languages = [], streak = null, activity = [] }) {
       const detail = l.detail + (l.count > 1 ? ` ×${l.count}` : '');
       return `<text x="332" y="${y}" fill="#5CD6F2">${l.date}</text>`
         + `<text x="384" y="${y}" font-weight="700" fill="${l.color}">${l.label}</text>`
-        + `<text x="442" y="${y}" fill="#F4F1FF">${esc(clip(l.repo, detail ? 30 : 40))}</text>`
-        + (detail ? `<text x="742" y="${y}" text-anchor="end" fill="#8E93C9">${esc(clip(detail, 10))}</text>` : '');
+        + `<text x="448" y="${y}" fill="#F4F1FF">${esc(clip(l.repo, detail ? 26 : 36))}</text>`
+        + (detail ? `<text x="742" y="${y}" text-anchor="end" fill="#A9AEDB">${esc(clip(detail, 9))}</text>` : '');
     }).join('')
     : '<text x="332" y="174" fill="#8E93C9">AWAITING FIRST SYNC</text>';
 

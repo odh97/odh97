@@ -45,7 +45,7 @@
       <path d="M120 256h3v3h-3zM330 252h3v3h-3zM560 256h3v3h-3zM760 250h3v3h-3z" fill="#F6DF5A"/>
       <path d="M260 250h3v3h-3zM620 252h3v3h-3z" fill="#F4F1FF"/>
       <!-- 범례: 창문 불빛 5단계 (꺼짐 → 밝음) -->
-      <rect x="800" y="16" width="12" height="12" fill="#141A3F"/><rect x="818" y="16" width="12" height="12" fill="#5A4A3A"/><rect x="836" y="16" width="12" height="12" fill="#B07A3A"/><rect x="854" y="16" width="12" height="12" fill="#E9A04F"/><rect x="872" y="16" width="12" height="12" fill="#F6DF5A"/>
+      <rect x="800" y="16" width="12" height="12" fill="#141A3F"/><rect x="818" y="16" width="12" height="12" fill="#8A6232"/><rect x="836" y="16" width="12" height="12" fill="#C0843A"/><rect x="854" y="16" width="12" height="12" fill="#E9A04F"/><rect x="872" y="16" width="12" height="12" fill="#F6DF5A"/>
     </g>
 
     <!-- 명령 줄 -->
