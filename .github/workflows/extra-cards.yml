@@ -1,4 +1,4 @@
-name: Update extra cards
+name: Update cafe card
 
 on:
   schedule:
@@ -10,13 +10,8 @@ on:
       - .github/workflows/extra-cards.yml
       - cards/github.mjs
       - cards/embed.mjs
-      - cards/extras.test.mjs
-      - cards/languages/template.svg
-      - cards/languages/update.mjs
-      - cards/streak/template.svg
-      - cards/streak/update.mjs
-      - cards/activity/template.svg
-      - cards/activity/update.mjs
+      - cards/tmux/*.mjs
+      - cards/tmux/template.svg
 
 permissions:
   contents: write
@@ -34,25 +29,21 @@ jobs:
         with:
           node-version: '24'
       - name: Test card logic
-        run: node --test cards/extras.test.mjs
-      - name: Build cards
+        run: node --test cards/tmux/update.test.mjs
+      - name: Build cafe card
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          node cards/languages/update.mjs
-          node cards/streak/update.mjs
-          node cards/activity/update.mjs
+        run: node cards/tmux/update.mjs
       - name: Embed fonts
         # 글꼴을 못 받아도 카드는 시스템 글꼴로 표시되므로 실패해도 계속합니다.
-        run: node cards/embed.mjs cards/languages/languages.svg cards/streak/streak.svg cards/activity/activity.svg || echo "font embed skipped"
-      - name: Commit cards
+        run: node cards/embed.mjs cards/tmux/tmux.svg || echo "font embed skipped"
+      - name: Commit card
         run: |
-          files="cards/languages/languages.svg cards/streak/streak.svg cards/activity/activity.svg"
-          if [ -n "$(git status --porcelain -- $files)" ]; then
+          if [ -n "$(git status --porcelain -- cards/tmux/tmux.svg)" ]; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add $files
-            git commit -m 'Update extra cards'
+            git add cards/tmux/tmux.svg
+            git commit -m 'Update cafe card'
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push
           fi

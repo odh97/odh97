@@ -14,7 +14,7 @@ on:
 permissions:
   contents: write
 
-# Serialize with the stats workflow so generated commits do not conflict.
+# Serialize with the cafe card workflow so generated commits do not conflict.
 concurrency:
   group: profile-assets
   cancel-in-progress: false

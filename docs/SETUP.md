@@ -11,22 +11,17 @@
 
 프로필 카드는 터미널 화면 스타일입니다. 캐릭터는 GitHub 프로필 사진에서 보여 주므로 카드에는 넣지 않습니다. 문구는 cards/profile/profile.svg의 text 요소에서 수정하고, 새 글자를 쓰면 `node cards/embed.mjs cards/profile/profile.svg`를 실행하세요.
 
-## 3. 통계 첫 실행
+## 3. 카페 카드 (언어 · 기여 기록 · 최근 활동)
 
-저장소 **Actions → Update profile stats → Run workflow**를 한 번 실행하세요. 이후 매일 **한국 시간 09:23**에 갱신을 시도합니다. 예약 실행은 지연될 수 있습니다. 별도 개인 토큰 입력 없이 저장소의 GITHUB_TOKEN을 사용합니다.
+README 마지막 카드는 밤의 카페 거리입니다. 쇼윈도 안의 tmux 터미널이 세 칸으로 나뉘어 다음을 보여 줍니다.
 
-통계 카드에는 실제 공개 통계와 UTC 갱신 시각이 표시됩니다. 페이지를 열 때 API를 호출하는 방식이 아니라, Actions가 매일 데이터를 조회해 저장소의 SVG 파일을 갱신하는 방식입니다. API 요청이 실패하면 기존 카드는 유지되고 Actions에 실패가 표시됩니다. **--**는 아직 통계를 받지 않은 초기 상태를 뜻합니다.
+| 칸 | 내용 | 데이터 |
+| --- | --- | --- |
+| `cat languages.txt` | 많이 쓴 언어 상위 5개 + Other | 공개 원본 저장소(fork 제외)의 언어별 bytes 합계 |
+| `cat streak.txt` | 1년 기여 수 · 활동한 날 · 최장 연속 · 하루 최다 | GraphQL contributionCalendar (비공개 기여 표시를 켜면 포함) |
+| `tail -n 5 activity.log` | 최근 공개 활동 5줄 | 공개 이벤트 API (반영이 몇 시간 늦을 수 있음) |
 
-| 항목 | 집계 기준 |
-| --- | --- |
-| PUBLIC REPOS | odh97 소유의 공개 저장소 수, fork 포함 |
-| STARS | fork가 아닌 공개 저장소의 받은 star 합계 |
-| FOLLOWERS | odh97 공개 팔로워 수 |
-| FORKS | fork가 아닌 공개 저장소의 forks_count 합계 |
-
-커밋 수·비공개 기여·회사 또는 조직 소유 저장소는 집계하지 않습니다. STARS와 FORKS는 저장소 API 필드의 합계이며 기여도 점수가 아닙니다.
-
-통계가 갱신되지 않으면 Actions 활성화 여부, 실패 로그, 저장소 정책의 Actions 쓰기 권한과 기본 브랜치 보호 규칙을 확인하세요. 이 워크플로는 cards/stats/stats.svg를 기본 브랜치에 커밋합니다. 조직 정책이 쓰기를 금지하거나 브랜치 보호가 직접 푸시를 막으면 관리 정책에 맞는 변경이 필요합니다. 장기간 활동이 없는 공개 저장소의 예약 실행은 비활성화될 수 있으므로 Actions에서 재활성화하세요.
+쉬는 날이 있어도 0으로 떨어지는 "현재 연속 기여"는 일부러 넣지 않았습니다. Actions(**Update cafe card**)가 매일 한국 시간 09:43에 갱신합니다. 장면과 쇼윈도 디자인은 cards/tmux/template.svg, 데이터는 cards/tmux/*.mjs에 있습니다.
 
 ## 4. 디자인과 배지
 
@@ -64,31 +59,36 @@ CLAUDE.md                     카드별 수정 위치 안내
 cards/
   profile/profile.svg         소개 카드 (직접 편집)
   skills/skills.svg           기술 카드 (직접 편집)
-  embed.mjs                   SVG에 글꼴 삽입 (프로필·스킬 공용)
+  embed.mjs                   SVG에 글꼴 삽입 (공용)
+  github.mjs                  GitHub API · 템플릿 공용 헬퍼
   pacman/
     template.svg              아파트 카드 장면 디자인
-    style.mjs                 색상 매핑 + 템플릿 적용
+    style.mjs                 창문 색 매핑 + 고양이 스프라이트 + 템플릿 적용
     pacman.svg                생성물 (Actions가 실제 기록으로 교체, 직접 편집 금지)
-  stats/
-    template.svg              통계 카드 디자인
-    update.mjs                GitHub API 수집 + 템플릿 적용
+  tmux/
+    template.svg              카페 장면 + 쇼윈도 터미널 디자인
+    update.mjs                세 칸 데이터를 채워 tmux.svg 생성
+    languages.mjs             언어 비율 수집·계산
+    streak.mjs                기여 기록 수집·계산
+    activity.mjs              최근 활동 수집·정리
     update.test.mjs           테스트
-    stats.svg                 생성물 (Actions가 매일 갱신)
-.github/workflows/profile-stats.yml
+    tmux.svg                  생성물 (Actions가 매일 갱신)
 .github/workflows/contribution-previews.yml
+.github/workflows/extra-cards.yml
 docs/SETUP.md
 ```
 
 ## 선택: 로컬 검증
 
-Node.js 24가 있다면 패키지 폴더에서 다음을 실행할 수 있습니다. 추가 패키지는 필요하지 않습니다.
+Node.js 24가 있다면 저장소 폴더에서 다음을 실행할 수 있습니다. 추가 패키지는 필요하지 않습니다.
 
 ```text
-node --test cards/stats/update.test.mjs
-node cards/stats/update.mjs
+node --test cards/tmux/update.test.mjs
+node cards/tmux/update.mjs
+node cards/embed.mjs cards/tmux/tmux.svg
 ```
 
-두 번째 명령은 GitHub API에 접속하여 통계를 갱신합니다. --init 옵션은 초기 카드로 되돌리므로 적용 후에는 사용하지 마세요.
+두 번째 명령은 GitHub API에 접속해 카페 카드를 다시 만듭니다. 토큰이 없으면 기여 기록 칸은 `--`로 남고, 비로그인 요청 한도(시간당 60회)를 넘으면 실패할 수 있습니다.
 
 ## 참고 문서
 
