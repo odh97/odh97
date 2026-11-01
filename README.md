@@ -1,24 +1,12 @@
-<!-- Pixel artwork: assets/*.svg | Setup: docs/SETUP.md -->
-<p align="center">
-  <img src="./assets/profile.svg" width="960" alt="O_Dae ✦ — Frontend Developer · Player Profile" />
-</p>
+<!-- Design: assets/profile.svg + assets/skills.svg → assets/overview.svg | Setup: docs/SETUP.md -->
+<img src="./assets/overview.svg" width="960" alt="O_Dae ✦ · Frontend Developer · 오대현 · odh97 · 서비스를 이해할수록 개발이 더 재미있어집니다. · 기술: JavaScript, TypeScript, React, Next.js, Tailwind CSS, React Query, Zustand, Node.js, Express, NestJS" />
 
 <!-- 본인이 제작한 캐릭터를 assets/avatar.png로 추가한 뒤 아래 한 줄의 주석을 해제하세요.
 <img src="./assets/avatar.png" align="right" width="144" alt="오대현의 픽셀 캐릭터" />
 -->
 
-# O_Dae ✦
-
-**Frontend Developer**  
-오대현 · **odh97**
-
-서비스를 이해할수록 개발이 더 재미있어집니다.
-
-[![GitHub](https://img.shields.io/badge/odh97-343A62?style=flat-square&logo=github&logoColor=EDE9FE)](https://github.com/odh97)
-
-<br clear="right" />
-
-<img src="./assets/skills.svg" width="960" alt="Skill Inventory — 기술 스택" />
+<details>
+<summary>기술 배지 보기</summary>
 
 ### Languages
 
@@ -38,6 +26,8 @@
 ![Node.js](https://img.shields.io/badge/Node.js-202840?style=for-the-badge&logo=nodedotjs&logoColor=8ED5A0)
 ![Express](https://img.shields.io/badge/Express-202840?style=for-the-badge&logo=express&logoColor=FFFFFF)
 ![NestJS](https://img.shields.io/badge/NestJS-202840?style=for-the-badge&logo=nestjs&logoColor=FF8092)
+
+</details>
 
 <br />
 
