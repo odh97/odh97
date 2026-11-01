@@ -7,10 +7,14 @@
 | 프로필 | `cards/profile/profile.svg` (위쪽만) | `cards/embed.mjs` (글꼴 삽입) | 같은 파일 |
 | 스킬 | `cards/skills/skills.svg` (위쪽만) | `cards/embed.mjs` (글꼴 삽입) | 같은 파일 |
 | 잔디(아파트) | `cards/pacman/template.svg` (위쪽만) | `cards/pacman/style.mjs` (창문 색·고양이 `PLAYER`) | `cards/pacman/pacman.svg` |
+| 언어 | `cards/languages/template.svg` | `cards/languages/update.mjs` | `cards/languages/languages.svg` |
+| 연속 기여 | `cards/streak/template.svg` | `cards/streak/update.mjs` | `cards/streak/streak.svg` |
+| 최근 활동 | `cards/activity/template.svg` | `cards/activity/update.mjs` | `cards/activity/activity.svg` |
 | 통계 | `cards/stats/template.svg` | `cards/stats/update.mjs` | `cards/stats/stats.svg` |
 
 - **`cards/pacman/pacman.svg`는 약 250KB짜리 생성물입니다. 절대 읽거나 편집하지 마세요.** 프레임은 `template.svg`, 색상 매핑은 `style.mjs`의 `colors`에서 수정하고 `node cards/pacman/style.mjs`로 다시 생성합니다.
 - `profile.svg`·`skills.svg` 끝의 "아래는 생성되는" 주석 뒤는 base64 글꼴입니다. 파일은 그 주석 앞까지만 읽으세요 (Grep으로 줄 번호 확인 후 limit). 새 글자를 쓰면 `node cards/embed.mjs <svg 경로>`를 실행합니다. 글꼴은 큰 제목만 Silkscreen(픽셀), 나머지는 JetBrains Mono / IBM Plex Sans KR입니다. 배지 좌표 규칙은 skills.svg 주석에 있습니다.
 - 통계 디자인을 수정한 뒤에는 `node --test cards/stats/update.test.mjs`를 실행하세요. `stats.svg`는 Actions가 매일 다시 생성합니다.
 - 템플릿의 `{{key}}` 자리표시자는 각 `.mjs`가 채웁니다. 키를 추가하면 스크립트의 `vars`에도 추가해야 합니다.
-- 워크플로: `.github/workflows/profile-stats.yml`(통계), `contribution-previews.yml`(팩맨).
+- 언어·연속 기여·최근 활동 카드는 `cards/github.mjs`(API·템플릿 공용 헬퍼)를 씁니다. 결과물 SVG 끝에는 base64 글꼴이 붙으니 읽지 말고 템플릿을 보세요. 로직을 바꾸면 `node --test cards/extras.test.mjs`. 연속 기여는 GraphQL이라 토큰이 필요해 로컬에선 `--init`만 됩니다.
+- 워크플로: `.github/workflows/profile-stats.yml`(통계), `contribution-previews.yml`(잔디), `extra-cards.yml`(언어·연속 기여·최근 활동).

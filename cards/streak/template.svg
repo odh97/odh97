@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="200" viewBox="0 0 960 200" role="img" aria-labelledby="streak-title streak-desc">
+  <title id="streak-title">odh97 contribution streak</title>
+  <desc id="streak-desc">{{desc}}</desc>
+  <rect width="960" height="200" fill="#0E1230"/>
+  <rect x="20" y="12" width="920" height="176" fill="#141A3F"/>
+  <g fill="#B6A6FF"><rect x="20" y="8" width="920" height="4"/><rect x="20" y="188" width="920" height="4"/><rect x="16" y="12" width="4" height="176"/><rect x="940" y="12" width="4" height="176"/></g>
+  <g font-family="'JetBrains Mono', Consolas, monospace">
+    <text x="44" y="44" font-size="13" font-weight="700" fill="#5CD6F2">$</text>
+    <text x="60" y="44" font-size="13" font-weight="700" fill="#F4F1FF">cat streak.txt</text>
+
+    <!-- 칸 4개: x 44 / 266 / 488 / 710, 폭 206 -->
+    <g shape-rendering="crispEdges" fill="#0E1230" stroke="#3A4280" stroke-width="2">
+      <rect x="45" y="61" width="204" height="82"/><rect x="267" y="61" width="204" height="82"/><rect x="489" y="61" width="204" height="82"/><rect x="711" y="61" width="204" height="82"/>
+    </g>
+    <g font-size="11" font-weight="500" fill="#8E93C9">
+      <text x="62" y="86">CONTRIBUTIONS · 1Y</text><text x="284" y="86">CURRENT STREAK</text><text x="506" y="86">LONGEST STREAK</text><text x="728" y="86">BEST DAY</text>
+    </g>
+    <g font-size="28" font-weight="700">
+      <text x="62" y="126" fill="#B6A6FF">{{total}}</text><text x="284" y="126" fill="#F6DF5A">{{current}}</text><text x="506" y="126" fill="#5CD6F2">{{longest}}</text><text x="728" y="126" fill="#F4F1FF">{{best}}</text>
+    </g>
+    <text x="44" y="170" font-size="11" font-weight="500" fill="#8E93C9">{{footer}}</text>
+    <text x="916" y="170" text-anchor="end" font-size="11" font-weight="500" fill="#8E93C9">PUBLIC + PRIVATE COUNTS · DAILY SYNC</text>
+  </g>
+  <style id="embedded-fonts" data-families="JetBrains+Mono:wght@500;700"></style>
+</svg>

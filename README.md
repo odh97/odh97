@@ -4,4 +4,8 @@
 
 <img src="./cards/pacman/pacman.svg" width="960" alt="odh97의 최근 1년 기여 기록 애니메이션" />
 
+<img src="./cards/languages/languages.svg" width="960" alt="공개 저장소에서 많이 쓴 언어 비율" />
+<img src="./cards/streak/streak.svg" width="960" alt="최근 1년 기여 수와 연속 기여 기록" />
+<img src="./cards/activity/activity.svg" width="960" alt="최근 공개 활동 5개" />
+
 [![GitHub 통계: 공개 저장소·원본 저장소 stars/forks·팔로워](./cards/stats/stats.svg)](https://github.com/odh97?tab=repositories)
