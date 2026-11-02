@@ -5,4 +5,4 @@
 
 <img src="./cards/pacman/pacman.svg?v=3" width="960" alt="odh97의 최근 1년 기여 기록: 가을 주택가의 창문 불빛 애니메이션" />
 
-<img src="./cards/tmux/tmux.svg?v=3" width="960" alt="카페 쇼윈도 속 터미널: 많이 쓴 언어, 최근 1년 기여 기록, 최근 공개 활동" />
+<img src="./cards/tmux/tmux.svg?v=4" width="960" alt="카페 쇼윈도 속 터미널: 많이 쓴 언어, 최근 1년 기여 기록, 최근 공개 활동" />
