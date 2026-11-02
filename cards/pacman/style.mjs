@@ -16,18 +16,21 @@ const attr = (tag, name) => Number(tag.match(new RegExp(`\\b${name}="([\\d.]+)"`
 const right = Math.max(...cells.map(([tag]) => attr(tag, 'x') + attr(tag, 'width')));
 const bottom = Math.max(...cells.map(([tag]) => attr(tag, 'y') + attr(tag, 'height')));
 if (!Number.isFinite(right + bottom)) throw new Error('Invalid grid bounds');
-// 업스트림 색(라이트·다크)과 이전 스타일 색 → 아파트 외벽·창문 불빛 색. 키는 소문자.
-// 배경·벽 → 외벽(#1C2250), 기여 0 → 꺼진 창문, 1~4 → 점점 밝아지는 불빛
+// 업스트림 색(라이트·다크)과 이전 스타일 색 → 주택 창문 불빛 색. 키는 소문자.
+// 배경·미로 벽은 아래에서 지우고(주택 외벽이 비치게), 기여 0 → 꺼진 창문, 1~4 → 점점 밝아지는 불빛
 const colors = {
-  '#ffffff': '#1C2250', '#0d1117': '#1C2250', '#202841': '#1C2250', '#151c30': '#1C2250', '#0e1230': '#1C2250', '#000000': '#1C2250', '#111526': '#1C2250',
-  '#ebedf0': '#141A3F', '#161b22': '#141A3F', '#2b3552': '#141A3F', '#28324d': '#141A3F', '#222a5e': '#141A3F',
-  '#9be9a8': '#8A6232', '#0e4429': '#8A6232', '#514477': '#8A6232', '#3b348f': '#8A6232', '#5a4a3a': '#8A6232',
-  '#40c463': '#C0843A', '#006d32': '#C0843A', '#7560a8': '#C0843A', '#5b4fc9': '#C0843A', '#b07a3a': '#C0843A',
-  '#30a14e': '#E9A04F', '#26a641': '#E9A04F', '#9786ec': '#E9A04F', '#8e7ff0': '#E9A04F',
-  '#216e39': '#F6DF5A', '#39d353': '#F6DF5A', '#c7b8ff': '#F6DF5A', '#cfc4ff': '#F6DF5A',
-  '#57606a': '#B9BCE0', '#8b949e': '#B9BCE0', '#adb9da': '#B9BCE0', '#8e93c9': '#B9BCE0',
+  '#1c2250': '#1C2250', '#ffffff': '#1C2250', '#0d1117': '#1C2250', '#202841': '#1C2250', '#151c30': '#1C2250', '#0e1230': '#1C2250', '#000000': '#1C2250', '#111526': '#1C2250',
+  '#141a3f': '#1B1828', '#ebedf0': '#1B1828', '#161b22': '#1B1828', '#2b3552': '#1B1828', '#28324d': '#1B1828', '#222a5e': '#1B1828',
+  '#8a6232': '#7A4A26', '#9be9a8': '#7A4A26', '#0e4429': '#7A4A26', '#514477': '#7A4A26', '#3b348f': '#7A4A26', '#5a4a3a': '#7A4A26',
+  '#c0843a': '#B8702E', '#40c463': '#B8702E', '#006d32': '#B8702E', '#7560a8': '#B8702E', '#5b4fc9': '#B8702E', '#b07a3a': '#B8702E',
+  '#e9a04f': '#E39A3B', '#30a14e': '#E39A3B', '#26a641': '#E39A3B', '#9786ec': '#E39A3B', '#8e7ff0': '#E39A3B',
+  '#f6df5a': '#F7D35A', '#216e39': '#F7D35A', '#39d353': '#F7D35A', '#c7b8ff': '#F7D35A', '#cfc4ff': '#F7D35A',
+  '#b9bce0': '#E8D2B0', '#57606a': '#E8D2B0', '#8b949e': '#E8D2B0', '#adb9da': '#E8D2B0', '#8e93c9': '#E8D2B0',
 };
 graph = graph.replace(/#[\da-f]{6}\b/gi, color => colors[color.toLowerCase()] || color);
+// 배경 사각형과 미로 벽(wh-/wv-)을 지워 집마다 다른 외벽 색이 창문 사이로 보이게
+graph = graph.replace(/<rect width="100%" height="100%"[^>]*\/>/, '');
+graph = graph.replace(/<rect id="w[hv]-[^>]*>(<\/rect>)?/g, '');
 // 월 표시: 축소돼도 읽히게 10 → 14
 graph = graph.replace(/(<text\b[^>]*?)\bfont-size="10"/g, '$1font-size="14"');
 // 잔디 칸 = 창문: 둥근 모서리를 거의 네모로
@@ -65,12 +68,12 @@ graph = graph.replace(/<rect\b[^>]*\bid="c-\d+-\d+"[^>]*>[\s\S]*?<\/rect>/g, cel
 });
 const graphWidth = right + 4;
 const graphHeight = bottom + 4;
-// 레이아웃은 template.svg에 고정(카드 960×290). 그래프는 외벽 안 폭 848에 맞춰 높이만 계산.
-const displayHeight = Math.ceil(graphHeight * 848 / graphWidth);
+// 레이아웃은 template.svg에 고정(카드 960×340). 그래프는 주택 외벽 폭 800에 맞춰 높이만 계산.
+const displayHeight = Math.ceil(graphHeight * 800 / graphWidth);
 const template = await readFile(new URL('./template.svg', import.meta.url), 'utf8');
 const vars = {
   graphDisplayHeight: displayHeight, graphWidth, graphHeight, graph,
-  desc: sample ? 'Style preview with upstream sample data, not odh97 contributions.' : 'odh97 contribution calendar as lit apartment windows, animated.',
+  desc: sample ? 'Style preview with upstream sample data, not odh97 contributions.' : 'odh97 contribution calendar as lit windows of autumn houses, animated.',
 };
 source = template.replace(/\{\{(\w+)\}\}/g, (_, k) => {
   if (!(k in vars)) throw new Error('Unknown template key: ' + k);

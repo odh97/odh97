@@ -39,13 +39,13 @@ README 마지막 카드는 밤의 카페 거리입니다. 쇼윈도 안의 tmux 
 
 기술 배지는 cards/skills/skills.svg에 직접 그리므로 외부 배지 서비스 없이 표시됩니다. 중복된 펼침 배지 영역을 제거하고 소개 카드 안에서 기술 목록을 한 번에 볼 수 있도록 구성했습니다. README에는 이미지 대체 텍스트를 포함했습니다.
 
-## 5. 기여 그래프 (아파트 카드)
+## 5. 기여 그래프 (가을 주택가 카드)
 
-README 세 번째 카드는 1년치 기여 기록을 아파트 외벽의 창문으로 보여 줍니다. 기여가 없는 날은 꺼진 창문, 많을수록 밝은 불빛입니다. 위로는 하늘과 옥상(안테나·화분·위성 안테나), 아래로는 화단·산책로·잔디밭이 이어져 프로필(하늘) → 스킬(야경) → 아파트로 장면이 연결됩니다. 왼쪽 위에는 `$ git log --graph`가 있습니다.
+README 세 번째 카드는 1년치 기여 기록을 나란히 선 주택 여섯 채의 창문으로 보여 줍니다. 기여가 없는 날은 꺼진 창문, 많을수록 밝은 불빛입니다. 위로는 보름달과 지붕(다락 창·굴뚝), 양옆은 단풍나무, 아래로는 울타리·보도·낙엽이 이어지고 카드 전체에 단풍잎이 떨어집니다. 왼쪽 위에는 `$ git log --graph`가 있습니다. 이전 여름밤(아파트) 버전은 태그 `theme/2026-summer-night`에 있습니다.
 
 애니메이션은 [pacman-contribution-graph](https://github.com/abozanona/pacman-contribution-graph)가 GitHub GraphQL의 contributionCalendar로 생성합니다. 프로필 설정에서 비공개 기여 표시를 켜 두면 비공개 기여 횟수도 포함됩니다. 팩맨 자리는 캐릭터 그림 속 회색 고양이 픽셀 스프라이트로 바꾸고 이동 경로만 유지합니다(회전·입 모양 제외).
 
-- 장면 디자인: cards/pacman/template.svg (명령 줄 글자를 바꾸면 `node cards/embed.mjs cards/pacman/template.svg`)
+- 장면 디자인: cards/pacman/template.svg (주택 경계는 잔디 열 기준 0·9·17·27·35·44·53) (명령 줄 글자를 바꾸면 `node cards/embed.mjs cards/pacman/template.svg`)
 - 창문 색·고양이 스프라이트: cards/pacman/style.mjs의 `colors`, `PLAYER`
 - 로컬에서 다시 입히기: `node cards/pacman/style.mjs` (이미 스타일이 입혀진 파일에도 다시 적용 가능)
 

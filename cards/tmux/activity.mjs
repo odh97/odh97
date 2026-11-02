@@ -2,15 +2,15 @@
 import { github, USER } from '../github.mjs';
 
 const KINDS = {
-  PushEvent: ['PUSH', '#B6A6FF', p => (p.ref ?? '').replace('refs/heads/', '')],
+  PushEvent: ['PUSH', '#E8873A', p => (p.ref ?? '').replace('refs/heads/', '')],
   PullRequestEvent: ['PR', '#F6DF5A', p => `${p.action} #${p.number ?? p.pull_request?.number ?? ''}`],
-  CreateEvent: ['CREATE', '#66B94A', p => [p.ref_type, p.ref].filter(Boolean).join(' ')],
+  CreateEvent: ['CREATE', '#E8A33A', p => [p.ref_type, p.ref].filter(Boolean).join(' ')],
   IssuesEvent: ['ISSUE', '#F08A9A', p => `${p.action} #${p.issue?.number ?? ''}`],
   IssueCommentEvent: ['COMMENT', '#F08A9A', p => `#${p.issue?.number ?? ''}`],
   PullRequestReviewEvent: ['REVIEW', '#F6DF5A', p => `#${p.pull_request?.number ?? ''}`],
-  ReleaseEvent: ['RELEASE', '#5CD6F2', p => p.release?.tag_name ?? ''],
+  ReleaseEvent: ['RELEASE', '#E25C45', p => p.release?.tag_name ?? ''],
   WatchEvent: ['STAR', '#E9A04F', () => ''],
-  ForkEvent: ['FORK', '#5CD6F2', () => ''],
+  ForkEvent: ['FORK', '#E25C45', () => ''],
 };
 
 export async function collectEvents(api = github()) {

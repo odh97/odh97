@@ -1,8 +1,8 @@
 // 공개 원본 저장소(fork 제외)의 언어별 코드 양(bytes) 합산 → 상위 5 + Other
 import { github, USER } from '../github.mjs';
 
-export const LANG_COLORS = ['#B6A6FF', '#5CD6F2', '#F6DF5A', '#E9A04F', '#F08A9A'];
-export const OTHER_COLOR = '#4E4A9E';
+export const LANG_COLORS = ['#E25C45', '#E8873A', '#F6DF5A', '#9CBF6E', '#F08A9A'];
+export const OTHER_COLOR = '#7A4A3A';
 
 export async function collectLanguages(api = github()) {
   const repos = [];

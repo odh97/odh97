@@ -20,27 +20,27 @@ export function renderTmux({ languages = [], streak = null, activity = [] }) {
       x += width;
       return rect;
     }).join('')
-    : '<rect x="18" y="70" width="274" height="12" fill="#222A5E"/>';
+    : '<rect x="18" y="70" width="274" height="12" fill="#3A2430"/>';
   const langList = languages.length
     ? languages.map((item, i) => {
       const y = 104 + i * 26;
       return `<rect x="18" y="${y - 9}" width="9" height="9" fill="${item.color}" shape-rendering="crispEdges"/>`
-        + `<text x="34" y="${y}" fill="#F4F1FF">${esc(item.name)}</text>`
-        + `<text x="292" y="${y}" text-anchor="end" fill="#8E93C9">${pct(item.share)}</text>`;
+        + `<text x="34" y="${y}" fill="#FFF4E6">${esc(item.name)}</text>`
+        + `<text x="292" y="${y}" text-anchor="end" fill="#C4A58C">${pct(item.share)}</text>`;
     }).join('')
-    : '<text x="18" y="104" fill="#8E93C9">AWAITING FIRST SYNC</text>';
+    : '<text x="18" y="104" fill="#C4A58C">AWAITING FIRST SYNC</text>';
 
   // 활동: y174부터 18 간격
   const activityRows = activity.length
     ? activity.map((l, i) => {
       const y = 174 + i * 18;
       const detail = l.detail + (l.count > 1 ? ` ×${l.count}` : '');
-      return `<text x="332" y="${y}" fill="#5CD6F2">${l.date}</text>`
+      return `<text x="332" y="${y}" fill="#E25C45">${l.date}</text>`
         + `<text x="384" y="${y}" font-weight="700" fill="${l.color}">${l.label}</text>`
-        + `<text x="448" y="${y}" fill="#F4F1FF">${esc(clip(l.repo, detail ? 26 : 36))}</text>`
-        + (detail ? `<text x="742" y="${y}" text-anchor="end" fill="#A9AEDB">${esc(clip(detail, 9))}</text>` : '');
+        + `<text x="448" y="${y}" fill="#FFF4E6">${esc(clip(l.repo, detail ? 26 : 36))}</text>`
+        + (detail ? `<text x="742" y="${y}" text-anchor="end" fill="#D9C1A8">${esc(clip(detail, 9))}</text>` : '');
     }).join('')
-    : '<text x="332" y="174" fill="#8E93C9">AWAITING FIRST SYNC</text>';
+    : '<text x="332" y="174" fill="#C4A58C">AWAITING FIRST SYNC</text>';
 
   const desc = [
     languages.length ? 'Languages: ' + languages.map(i => `${esc(i.name)} ${pct(i.share)}`).join(', ') + '.' : '',
