@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="cafe-title cafe-desc">
   <title id="cafe-title">odh97 languages, contributions and recent activity</title>
-  <desc id="cafe-desc">Languages: JavaScript 30.6%, CSS 25.5%, TypeScript 19.4%, HTML 16.1%, SCSS 5.8%, Other 2.7%. Last year: 2541 contributions, 245 active days, longest streak 19 days, best day 42. Recent: 11-01 PUSH odh97/odh97; 10-29 PUSH odh97/posong; 10-23 PUSH odh97/posong; 10-21 PUSH odh97/posong; 10-19 STAR goldbergyoni/nodebestpractices.</desc>
+  <desc id="cafe-desc">Languages: JavaScript 30.6%, CSS 25.5%, TypeScript 19.4%, HTML 16.1%, SCSS 5.8%, Other 2.7%. Last year: 2562 contributions, 245 active days, longest streak 19 days, best day 42. Recent: 11-01 PUSH odh97/odh97; 10-29 PUSH odh97/posong; 10-23 PUSH odh97/posong; 10-21 PUSH odh97/posong; 10-19 STAR goldbergyoni/nodebestpractices.</desc>
   <rect width="960" height="440" fill="#1A1020"/>
   <rect x="20" y="12" width="920" height="416" fill="#22162B"/>
   <g fill="#E8873A"><rect x="20" y="8" width="920" height="4"/><rect x="20" y="428" width="920" height="4"/><rect x="16" y="12" width="4" height="416"/><rect x="940" y="12" width="4" height="416"/></g>
@@ -91,13 +91,13 @@
         <text x="332" y="82">CONTRIB · 1Y</text><text x="437" y="82">ACTIVE DAYS</text><text x="542" y="82">LONGEST</text><text x="647" y="82">BEST DAY</text>
       </g>
       <g font-size="22" font-weight="700">
-        <text x="332" y="106" fill="#E8873A">2541</text><text x="437" y="106" fill="#F6DF5A">245</text><text x="542" y="106" fill="#E25C45">19d</text><text x="647" y="106" fill="#FFF4E6">42</text>
+        <text x="332" y="106" fill="#E8873A">2562</text><text x="437" y="106" fill="#F6DF5A">245</text><text x="542" y="106" fill="#E25C45">19d</text><text x="647" y="106" fill="#FFF4E6">42</text>
       </g>
 
       <!-- 오른쪽 아래: 최근 활동 (날짜 x332 · 종류 x384 · 저장소 x448 · 내용 오른쪽 끝 x742, y174부터 18 간격) -->
       <text x="332" y="155" font-size="12" font-weight="700" fill="#E25C45">$</text>
       <text x="346" y="155" font-size="12" font-weight="700" fill="#FFF4E6">tail -n 5 activity.log</text>
-      <g font-size="13" font-weight="500"><text x="332" y="174" fill="#E25C45">11-01</text><text x="384" y="174" font-weight="700" fill="#E8873A">PUSH</text><text x="448" y="174" fill="#FFF4E6">odh97/odh97</text><text x="742" y="174" text-anchor="end" fill="#D9C1A8">main ×9</text><text x="332" y="192" fill="#E25C45">10-29</text><text x="384" y="192" font-weight="700" fill="#E8873A">PUSH</text><text x="448" y="192" fill="#FFF4E6">odh97/posong</text><text x="742" y="192" text-anchor="end" fill="#D9C1A8">dev</text><text x="332" y="210" fill="#E25C45">10-23</text><text x="384" y="210" font-weight="700" fill="#E8873A">PUSH</text><text x="448" y="210" fill="#FFF4E6">odh97/posong</text><text x="742" y="210" text-anchor="end" fill="#D9C1A8">dev</text><text x="332" y="228" fill="#E25C45">10-21</text><text x="384" y="228" font-weight="700" fill="#E8873A">PUSH</text><text x="448" y="228" fill="#FFF4E6">odh97/posong</text><text x="742" y="228" text-anchor="end" fill="#D9C1A8">dev</text><text x="332" y="246" fill="#E25C45">10-19</text><text x="384" y="246" font-weight="700" fill="#E9A04F">STAR</text><text x="448" y="246" fill="#FFF4E6">goldbergyoni/nodebestpractices</text></g>
+      <g font-size="13" font-weight="500"><text x="332" y="174" fill="#E25C45">11-01</text><text x="384" y="174" font-weight="700" fill="#E8873A">PUSH</text><text x="448" y="174" fill="#FFF4E6">odh97/odh97</text><text x="742" y="174" text-anchor="end" fill="#D9C1A8">main ×16</text><text x="332" y="192" fill="#E25C45">10-29</text><text x="384" y="192" font-weight="700" fill="#E8873A">PUSH</text><text x="448" y="192" fill="#FFF4E6">odh97/posong</text><text x="742" y="192" text-anchor="end" fill="#D9C1A8">dev</text><text x="332" y="210" fill="#E25C45">10-23</text><text x="384" y="210" font-weight="700" fill="#E8873A">PUSH</text><text x="448" y="210" fill="#FFF4E6">odh97/posong</text><text x="742" y="210" text-anchor="end" fill="#D9C1A8">dev</text><text x="332" y="228" fill="#E25C45">10-21</text><text x="384" y="228" font-weight="700" fill="#E8873A">PUSH</text><text x="448" y="228" fill="#FFF4E6">odh97/posong</text><text x="742" y="228" text-anchor="end" fill="#D9C1A8">dev</text><text x="332" y="246" fill="#E25C45">10-19</text><text x="384" y="246" font-weight="700" fill="#E9A04F">STAR</text><text x="448" y="246" fill="#FFF4E6">goldbergyoni/nodebestpractices</text></g>
     </g>
   </g>
 
