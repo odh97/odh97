@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="cafe-title cafe-desc">
   <title id="cafe-title">odh97 languages, contributions and recent activity</title>
-  <desc id="cafe-desc">Languages: JavaScript 30.6%, CSS 25.5%, TypeScript 19.4%, HTML 16.1%, SCSS 5.8%, Other 2.7%. Last year: 2563 contributions, 246 active days, longest streak 19 days, best day 42. Recent: 11-02 PUSH odh97/odh97; 11-01 PUSH odh97/odh97; 10-29 PUSH odh97/posong; 10-23 PUSH odh97/posong; 10-21 PUSH odh97/posong.</desc>
+  <desc id="cafe-desc">Languages: JavaScript 30.6%, CSS 25.5%, TypeScript 19.4%, HTML 16.1%, SCSS 5.8%, Other 2.7%. Last year: 2575 contributions, 247 active days, longest streak 19 days, best day 42. Recent: 11-02 PUSH odh97/odh97; 11-01 PUSH odh97/odh97; 10-29 PUSH odh97/posong; 10-23 PUSH odh97/posong; 10-21 PUSH odh97/posong.</desc>
   <rect width="960" height="440" fill="#1A1020"/>
   <rect x="20" y="12" width="920" height="416" fill="#22162B"/>
   <g fill="#E8873A"><rect x="20" y="8" width="920" height="4"/><rect x="20" y="428" width="920" height="4"/><rect x="16" y="12" width="4" height="416"/><rect x="940" y="12" width="4" height="416"/></g>
@@ -91,7 +91,7 @@
         <text x="332" y="82">CONTRIB · 1Y</text><text x="437" y="82">ACTIVE DAYS</text><text x="542" y="82">LONGEST</text><text x="647" y="82">BEST DAY</text>
       </g>
       <g font-size="22" font-weight="700">
-        <text x="332" y="106" fill="#E8873A">2563</text><text x="437" y="106" fill="#F6DF5A">246</text><text x="542" y="106" fill="#E25C45">19d</text><text x="647" y="106" fill="#FFF4E6">42</text>
+        <text x="332" y="106" fill="#E8873A">2575</text><text x="437" y="106" fill="#F6DF5A">247</text><text x="542" y="106" fill="#E25C45">19d</text><text x="647" y="106" fill="#FFF4E6">42</text>
       </g>
 
       <!-- 오른쪽 아래: 최근 활동 (날짜 x332 · 종류 x384 · 저장소 x448 · 내용 오른쪽 끝 x742, y174부터 18 간격) -->
